@@ -19,24 +19,25 @@ header{background:linear-gradient(135deg,var(--deep) 0%,var(--blue2) 100%);color
 .nav-tabs button{background:none;border:none;color:rgba(255,255,255,.6);font-family:'Rajdhani',sans-serif;font-size:13px;font-weight:600;letter-spacing:.6px;padding:11px 18px;cursor:pointer;border-bottom:3px solid transparent;transition:all .2s;white-space:nowrap;text-transform:uppercase;}
 .nav-tabs button:hover{color:var(--gold);}
 .nav-tabs button.active{color:var(--gold);border-bottom-color:var(--accent);}
-.page{display:none;} .page.active{display:block;}
+.page{display:none;}.page.active{display:block;}
 main{max-width:1060px;margin:0 auto;padding:22px 16px 60px;}
 .card{background:#fff;border-radius:8px;box-shadow:var(--shadow);padding:20px 24px;margin-bottom:18px;border-top:3px solid var(--blue);}
-.card.gold{border-top-color:var(--accent);} .card.red{border-top-color:var(--red);} .card.green{border-top-color:var(--green);}
+.card.gold{border-top-color:var(--accent);}.card.red{border-top-color:var(--red);}.card.green{border-top-color:var(--green);}
 .ctitle{font-family:'Rajdhani',sans-serif;font-size:14px;font-weight:700;color:var(--blue);letter-spacing:.8px;text-transform:uppercase;margin-bottom:13px;display:flex;align-items:center;gap:7px;}
-.fg{display:flex;flex-direction:column;gap:5px;} .fg.full{grid-column:1/-1;}
+.fg{display:flex;flex-direction:column;gap:5px;}.fg.full{grid-column:1/-1;}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px 18px;}
 .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px 18px;}
 label{font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;}
 label .req{color:var(--red);}
 input,select,textarea{border:1.5px solid var(--border);border-radius:5px;padding:7px 10px;font-size:13px;font-family:'Noto Sans',sans-serif;color:var(--text);background:#fafbfc;transition:border-color .2s;outline:none;}
 input:focus,select:focus,textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(26,58,107,.08);background:#fff;}
+input[readonly]{background:#f0f4f8;color:var(--navy);font-weight:600;cursor:not-allowed;}
 textarea{resize:vertical;min-height:60px;}
 .btn{display:inline-flex;align-items:center;gap:6px;padding:8px 18px;border-radius:5px;font-family:'Rajdhani',sans-serif;font-size:13px;font-weight:700;letter-spacing:.7px;text-transform:uppercase;cursor:pointer;border:2px solid transparent;transition:all .2s;}
-.btn-primary{background:var(--blue);color:#fff;border-color:var(--blue);} .btn-primary:hover{background:var(--navy);}
-.btn-gold{background:var(--accent);color:var(--navy);border-color:var(--accent);} .btn-gold:hover{background:var(--gold);}
+.btn-primary{background:var(--blue);color:#fff;border-color:var(--blue);}.btn-primary:hover{background:var(--navy);}
+.btn-gold{background:var(--accent);color:var(--navy);border-color:var(--accent);}.btn-gold:hover{background:var(--gold);}
 .btn-green{background:var(--green);color:#fff;border-color:var(--green);}
-.btn-outline{background:transparent;color:var(--blue);border-color:var(--blue);} .btn-outline:hover{background:var(--blue);color:#fff;}
+.btn-outline{background:transparent;color:var(--blue);border-color:var(--blue);}.btn-outline:hover{background:var(--blue);color:#fff;}
 .btn-red{background:var(--red);color:#fff;}
 .btn-sm{padding:5px 12px;font-size:12px;}
 .btn-actions{display:flex;gap:9px;margin-top:16px;flex-wrap:wrap;}
@@ -49,21 +50,24 @@ tr:hover td{background:#f4f7fb;}
 .add-row{display:inline-flex;align-items:center;gap:5px;margin-top:7px;background:none;border:1.5px dashed var(--blue);color:var(--blue);border-radius:5px;padding:5px 13px;font-size:12.5px;font-family:'Rajdhani',sans-serif;font-weight:600;cursor:pointer;}
 .add-row:hover{background:#e8f0fb;}
 .badge{display:inline-block;padding:2px 9px;border-radius:20px;font-size:11px;font-weight:600;}
-.b-green{background:#d4edda;color:#1a6b3a;} .b-yellow{background:#fff3cd;color:#856404;} .b-red{background:#f8d7da;color:#721c24;} .b-grey{background:#e2e8f0;color:#4a5568;}
+.b-green{background:#d4edda;color:#1a6b3a;}.b-yellow{background:#fff3cd;color:#856404;}.b-red{background:#f8d7da;color:#721c24;}.b-grey{background:#e2e8f0;color:#4a5568;}
 .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:13px;margin-bottom:18px;}
 .stat{background:#fff;border-radius:8px;padding:15px;box-shadow:var(--shadow);border-left:4px solid var(--blue);}
-.stat.gold{border-left-color:var(--accent);} .stat.red{border-left-color:var(--red);} .stat.green{border-left-color:var(--green);} .stat.orange{border-left-color:var(--orange);}
+.stat.gold{border-left-color:var(--accent);}.stat.red{border-left-color:var(--red);}.stat.green{border-left-color:var(--green);}.stat.orange{border-left-color:var(--orange);}
 .stat-num{font-family:'Rajdhani',sans-serif;font-size:28px;font-weight:700;color:var(--navy);line-height:1;}
 .stat-lbl{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-top:4px;}
 .sec-title{font-family:'Rajdhani',sans-serif;font-size:19px;font-weight:700;color:var(--navy);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;}
 .sec-sub{font-size:12.5px;color:var(--muted);margin-bottom:18px;}
 .dist-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px;margin-bottom:16px;}
 .dist-card{background:#fff;border-radius:7px;padding:11px 14px;box-shadow:0 2px 8px rgba(0,0,0,.07);border-left:4px solid var(--border);transition:all .2s;}
-.dist-card.submitted{border-left-color:var(--green);} .dist-card.pending{border-left-color:var(--orange);}
+.dist-card.submitted{border-left-color:var(--green);}.dist-card.pending{border-left-color:var(--orange);}
 .dist-name{font-family:'Rajdhani',sans-serif;font-size:14px;font-weight:700;color:var(--navy);letter-spacing:.5px;text-transform:uppercase;}
 .notice{background:#fff8e6;border:1px solid #f5c842;border-radius:5px;padding:9px 13px;font-size:12px;color:#7a5c00;margin-bottom:14px;}
+.info-box{background:#e8f0fb;border:1px solid #b8d0f0;border-radius:5px;padding:9px 13px;font-size:12px;color:#1a3a6b;margin-bottom:14px;}
 .alert-s{background:#d4edda;border-left:4px solid var(--green);border-radius:5px;padding:11px 15px;font-size:13px;color:var(--green);margin-top:14px;}
 .consol-tbl .total-row td{background:#e8f0fb;font-weight:700;font-family:'Rajdhani',sans-serif;}
+.moto-prefilled td{background:#f8fbff;}
+.moto-prefilled td:first-child{color:var(--navy);font-weight:600;}
 /* PDF */
 .pdf-wrap{background:#fff;max-width:800px;margin:0 auto;box-shadow:0 2px 24px rgba(0,0,0,.15);padding:28px 30px;border-radius:4px;font-size:12.5px;}
 .pdf-h{display:flex;align-items:center;gap:12px;border-bottom:3px double var(--navy);padding-bottom:12px;margin-bottom:14px;}
@@ -115,15 +119,15 @@ tr:hover td{background:#f4f7fb;}
 <div id="page-district" class="page active">
 <main>
   <div class="sec-title">District Data Entry</div>
-  <div class="sec-sub">Concerned district officer selects their district and fills this form. Data goes live to HQ dashboard instantly.</div>
-  <div class="notice">⚠️ Each district officer opens this same link, selects their district, fills the report and submits. All data consolidates at HQ automatically.</div>
+  <div class="sec-sub">District officer apna district select kare — motorcycle registration numbers automatically aa jaayenge.</div>
+  <div class="notice">⚠️ Sabhi district officers yahi link open karein, apna district select karein aur data bharen. Data HQ pe live ho jaata hai.</div>
 
   <div class="card">
     <div class="ctitle"><span>📌</span> Report Header</div>
     <div class="grid3">
       <div class="fg"><label>Report Date <span class="req">*</span></label><input type="date" id="d-date"></div>
       <div class="fg"><label>District <span class="req">*</span></label>
-        <select id="d-dist">
+        <select id="d-dist" onchange="loadMotorcycles()">
           <option value="">— Select Your District —</option>
           <option>Baddi (BBN)</option><option>Bilaspur</option><option>Chamba</option>
           <option>Dehra</option><option>Hamirpur</option><option>Kangra</option>
@@ -150,29 +154,44 @@ tr:hover td{background:#f4f7fb;}
     </div>
   </div>
 
+  <!-- Section 1: Vehicle + ITMS -->
   <div class="card gold">
     <div class="ctitle"><span>🚗</span> Section 1 — Vehicle Entry/Exit &amp; Non-Working ITMS</div>
     <div class="grid2" style="margin-bottom:12px">
       <div class="fg"><label>Vehicles Entered (Last 24 Hrs)</label><input type="number" id="d-vin" placeholder="0" min="0"></div>
       <div class="fg"><label>Vehicles Exited (Last 24 Hrs)</label><input type="number" id="d-vout" placeholder="0" min="0"></div>
     </div>
-    <div style="font-size:11.5px;font-weight:700;color:var(--navy);text-transform:uppercase;margin-bottom:7px">Non-Working ITMS</div>
-    <div class="tbl"><table><thead><tr><th>#</th><th>ITMS Location</th><th>Reason for Non-Working</th><th></th></tr></thead><tbody id="itms-tb"></tbody></table></div>
+    <div style="font-size:11.5px;font-weight:700;color:var(--navy);text-transform:uppercase;margin-bottom:7px">Non-Working ITMS (if any)</div>
+    <div class="tbl"><table><thead><tr><th>#</th><th>ITMS Location</th><th>Reason</th><th></th></tr></thead><tbody id="itms-tb"></tbody></table></div>
     <button class="add-row" onclick="addR('itms')">＋ Add ITMS Row</button>
   </div>
 
+  <!-- Section 2: Motorcycle — PRE-FILLED -->
   <div class="card">
     <div class="ctitle"><span>🏍️</span> Section 2 — Motorcycle Status (World Bank Project)</div>
-    <div class="tbl"><table><thead><tr><th>#</th><th>Reg. No.</th><th>Police Station / Beat</th><th>Patrolling (KMs)</th><th>Challans (24 Hrs)</th><th></th></tr></thead><tbody id="moto-tb"></tbody></table></div>
-    <button class="add-row" onclick="addR('moto')">＋ Add Motorcycle</button>
+    <div class="info-box" id="moto-info">ℹ️ Pehle district select karo — motorcycles automatically load ho jaayenge.</div>
+    <div class="tbl">
+      <table>
+        <thead><tr>
+          <th>#</th>
+          <th>Reg. No. <span style="color:var(--accent)">(Pre-filled)</span></th>
+          <th>Police Station / Beat <span style="color:var(--accent)">(Pre-filled)</span></th>
+          <th>Patrolling Done (KMs) <span style="color:#f5c842">★ Fill karo</span></th>
+          <th>Challans (24 Hrs) <span style="color:#f5c842">★ Fill karo</span></th>
+        </tr></thead>
+        <tbody id="moto-tb"></tbody>
+      </table>
+    </div>
   </div>
 
+  <!-- Section 3: Volunteers -->
   <div class="card">
     <div class="ctitle"><span>🦺</span> Section 3 — Traffic Volunteers Deployed</div>
     <div class="tbl"><table><thead><tr><th>#</th><th>No. of Volunteers</th><th>Place of Deployment</th><th>Nature of Duty</th><th></th></tr></thead><tbody id="vol-tb"></tbody></table></div>
     <button class="add-row" onclick="addR('vol')">＋ Add Volunteer Entry</button>
   </div>
 
+  <!-- Section 4: Accidents -->
   <div class="card red">
     <div class="ctitle"><span>🚨</span> Section 4 — Accident Cases</div>
     <div class="grid3" style="margin-bottom:12px">
@@ -185,6 +204,7 @@ tr:hover td{background:#f4f7fb;}
     <button class="add-row" onclick="addR('fatal')">＋ Add Fatal Case</button>
   </div>
 
+  <!-- Submit -->
   <div class="card green">
     <div class="ctitle"><span>✅</span> Submit to HQ</div>
     <div style="font-size:12.5px;background:#f7f9fb;border:1px solid var(--border);border-radius:5px;padding:12px 15px;margin-bottom:12px">
@@ -207,7 +227,6 @@ tr:hover td{background:#f4f7fb;}
 <main>
   <div class="sec-title">HQ Consolidated Dashboard</div>
   <div class="sec-sub" id="hq-sub">All 15 Districts — Live Consolidated Data</div>
-
   <div class="stats">
     <div class="stat"><div class="stat-num" id="s-sub">0</div><div class="stat-lbl">Districts Submitted</div></div>
     <div class="stat orange"><div class="stat-num" id="s-pend">15</div><div class="stat-lbl">Pending</div></div>
@@ -218,23 +237,17 @@ tr:hover td{background:#f4f7fb;}
     <div class="stat green"><div class="stat-num" id="s-vol">0</div><div class="stat-lbl">Volunteers Deployed</div></div>
     <div class="stat red"><div class="stat-num" id="s-itms">0</div><div class="stat-lbl">ITMS Non-Working</div></div>
   </div>
-
   <div class="card">
     <div class="ctitle"><span>🗺️</span> District Submission Status</div>
     <div class="dist-grid" id="dist-grid"></div>
   </div>
-
   <div class="card">
-    <div class="ctitle"><span>📊</span> Consolidated Summary — All Districts</div>
+    <div class="ctitle"><span>📊</span> Consolidated Summary</div>
     <div class="tbl">
       <table>
-        <thead><tr>
-          <th>District</th><th>Officer</th><th>Veh In</th><th>Veh Out</th>
-          <th>Motos</th><th>KMs</th><th>Challans</th><th>Volunteers</th>
-          <th>ITMS ❌</th><th>Accidents</th><th>e-DAR</th><th>Fatal</th><th>Status</th>
-        </tr></thead>
+        <thead><tr><th>District</th><th>Officer</th><th>Veh In</th><th>Veh Out</th><th>Motos</th><th>KMs</th><th>Challans</th><th>Volunteers</th><th>ITMS❌</th><th>Accidents</th><th>e-DAR</th><th>Fatal</th><th>Status</th></tr></thead>
         <tbody id="hq-body"></tbody>
-        <tfoot><tr class="total-row">
+        <tfoot><tr class="total-row" style="background:#e8f0fb;font-weight:700">
           <td colspan="2"><strong>TOTAL</strong></td>
           <td id="t-vin">0</td><td id="t-vout">0</td><td id="t-moto">0</td><td id="t-km">0</td><td id="t-ch">0</td>
           <td id="t-vol">0</td><td id="t-itms">0</td><td id="t-acc">0</td><td id="t-edar">0</td><td id="t-fat">0</td><td>—</td>
@@ -242,23 +255,16 @@ tr:hover td{background:#f4f7fb;}
       </table>
     </div>
   </div>
-
   <div class="card red">
-    <div class="ctitle"><span>🚨</span> Fatal Accident Cases — All Districts</div>
-    <div class="tbl">
-      <table><thead><tr><th>#</th><th>District</th><th>FIR No. &amp; Date</th><th>PS Name</th><th>Brief Facts</th></tr></thead>
-      <tbody id="hq-fatal"><tr><td colspan="5" style="text-align:center;color:var(--muted);padding:14px">No fatal cases yet.</td></tr></tbody></table>
-    </div>
+    <div class="ctitle"><span>🚨</span> Fatal Cases — All Districts</div>
+    <div class="tbl"><table><thead><tr><th>#</th><th>District</th><th>FIR No. &amp; Date</th><th>PS Name</th><th>Brief Facts</th></tr></thead>
+    <tbody id="hq-fatal"><tr><td colspan="5" style="text-align:center;color:var(--muted);padding:14px">No fatal cases yet.</td></tr></tbody></table></div>
   </div>
-
   <div class="card gold">
     <div class="ctitle"><span>⚠️</span> Non-Working ITMS — All Districts</div>
-    <div class="tbl">
-      <table><thead><tr><th>#</th><th>District</th><th>ITMS Location</th><th>Reason</th></tr></thead>
-      <tbody id="hq-itms"><tr><td colspan="4" style="text-align:center;color:var(--muted);padding:14px">No ITMS issues yet.</td></tr></tbody></table>
-    </div>
+    <div class="tbl"><table><thead><tr><th>#</th><th>District</th><th>ITMS Location</th><th>Reason</th></tr></thead>
+    <tbody id="hq-itms"><tr><td colspan="4" style="text-align:center;color:var(--muted);padding:14px">No ITMS issues yet.</td></tr></tbody></table></div>
   </div>
-
   <div class="btn-actions">
     <button class="btn btn-gold" onclick="go('pdf');buildPDF()">📄 Generate Consolidated PDF</button>
   </div>
@@ -269,76 +275,58 @@ tr:hover td{background:#f4f7fb;}
 <div id="page-pdf" class="page">
 <main>
   <div class="sec-title">📄 Consolidated DSI Report</div>
-  <div class="sec-sub">Official report ready. Click Print → Save as PDF.</div>
+  <div class="sec-sub">Official report ready. Print → Save as PDF.</div>
   <div class="btn-actions" style="margin-bottom:16px">
     <button class="btn btn-primary" onclick="window.print()">🖨️ Print / Save as PDF</button>
     <button class="btn btn-outline" onclick="go('hq')">← Back</button>
   </div>
-
   <div class="pdf-wrap">
     <div class="pdf-h">
       <div class="pdf-logo">🚦</div>
-      <div class="pdf-ht">
-        <h2>Himachal Pradesh Police</h2>
-        <p>Traffic, Tourist &amp; Railways Wing &nbsp;|&nbsp; DSI — Daily Situation Report</p>
-      </div>
-      <div class="pdf-ref">
-        <strong id="pdf-ref">DSI/—</strong>
-        <span id="pdf-date">—</span><br>
-        <span style="font-size:10px;color:var(--muted)">Generated: <span id="pdf-gen">—</span></span>
-      </div>
+      <div class="pdf-ht"><h2>Himachal Pradesh Police</h2><p>Traffic, Tourist &amp; Railways Wing &nbsp;|&nbsp; DSI — Daily Situation Report</p></div>
+      <div class="pdf-ref"><strong id="pdf-ref">DSI/—</strong><span id="pdf-date">—</span><br><span style="font-size:10px;color:var(--muted)">Generated: <span id="pdf-gen">—</span></span></div>
     </div>
-
     <div class="pdf-sec">
       <h3>📋 Contents</h3>
-      <table class="ptbl">
-        <thead><tr><th>Sr.</th><th>Title</th><th>Page</th></tr></thead>
-        <tbody>
-          <tr><td>1.</td><td>Vehicle Entry/Exit Status and Status of ITMS (Non-Working)</td><td>2-3</td></tr>
-          <tr><td>2.</td><td>Status of Motorcycle Under World Bank Project</td><td>3-4</td></tr>
-          <tr><td>3.</td><td>Status of Traffic Volunteers Employed</td><td>4</td></tr>
-          <tr><td>4.</td><td>Status of Accident Cases</td><td>4</td></tr>
-          <tr><td>5.</td><td>Fatal Accident Cases</td><td>4</td></tr>
-        </tbody>
-      </table>
+      <table class="ptbl"><thead><tr><th>Sr.</th><th>Title</th><th>Page</th></tr></thead>
+      <tbody>
+        <tr><td>1.</td><td>Vehicle Entry/Exit Status and Status of ITMS (Non-Working)</td><td>2-3</td></tr>
+        <tr><td>2.</td><td>Status of Motorcycle Under World Bank Project</td><td>3-4</td></tr>
+        <tr><td>3.</td><td>Status of Traffic Volunteers Employed</td><td>4</td></tr>
+        <tr><td>4.</td><td>Status of Accident Cases</td><td>4</td></tr>
+        <tr><td>5.</td><td>Fatal Accident Cases</td><td>4</td></tr>
+      </tbody></table>
     </div>
-
     <div class="pdf-sec">
       <h3>🚗 Section 1 — Vehicle Entry/Exit Status &amp; Non-Working ITMS</h3>
       <div style="display:flex;gap:30px;margin-bottom:10px">
         <div><div style="font-size:10px;text-transform:uppercase;color:var(--muted);font-weight:600">Total Vehicles Entered</div><div style="font-size:20px;font-family:'Rajdhani',sans-serif;font-weight:700;color:var(--navy)" id="pdf-vin">—</div></div>
         <div><div style="font-size:10px;text-transform:uppercase;color:var(--muted);font-weight:600">Total Vehicles Exited</div><div style="font-size:20px;font-family:'Rajdhani',sans-serif;font-weight:700;color:var(--navy)" id="pdf-vout">—</div></div>
       </div>
-      <div style="font-size:11px;font-weight:700;color:var(--navy);text-transform:uppercase;margin-bottom:5px">Name/Locations of Non-Working ITMS Along With Reasons:</div>
       <table class="ptbl"><thead><tr><th>Sr.No.</th><th>District</th><th>Name/Location of Non-Working ITMS &amp; Reasons</th></tr></thead>
       <tbody id="pdf-itms"><tr><td colspan="3" style="text-align:center;color:var(--muted)">NIL</td></tr></tbody></table>
     </div>
-
     <div class="pdf-sec">
       <h3>🏍️ Section 2 — Status of Motorcycle Distributed Under World Bank Project</h3>
       <table class="ptbl"><thead><tr><th>District</th><th>Motorcycle Reg. No.</th><th>Police Station &amp; Beat Deployed</th><th>Patrolling Done in Last 24 Hrs (KMs)</th><th>No. of Challans Done in Last 24 Hrs</th></tr></thead>
       <tbody id="pdf-moto"><tr><td colspan="5" style="text-align:center;color:var(--muted)">NIL</td></tr></tbody></table>
     </div>
-
     <div class="pdf-sec">
       <h3>🦺 Section 3 — Traffic Volunteers Deployed</h3>
       <table class="ptbl"><thead><tr><th>District</th><th>No. of Traffic Volunteers Deployed</th><th>Place of Deployment</th><th>Nature of Duty Assigned</th></tr></thead>
       <tbody id="pdf-vol"><tr><td colspan="4" style="text-align:center;color:var(--muted)">NIL</td></tr></tbody></table>
     </div>
-
     <div class="pdf-sec">
       <h3>🚨 Section 4 — Status of Accident Cases</h3>
-      <table class="ptbl" style="margin-bottom:10px"><thead><tr><th>No. of Accident Cases Entered in CCTNS</th><th>No. of Accident Cases Entered in e-DAR</th><th>Name of District Who Have Not Entered Accident Cases in e-DAR</th></tr></thead>
+      <table class="ptbl" style="margin-bottom:10px"><thead><tr><th>Accident Cases in CCTNS</th><th>Accident Cases in e-DAR</th><th>Districts NOT Entered in e-DAR</th></tr></thead>
       <tbody><tr>
         <td style="font-weight:700;text-align:center;font-size:15px" id="pdf-cctns">—</td>
         <td style="font-weight:700;text-align:center;font-size:15px" id="pdf-edar">—</td>
         <td id="pdf-missing">—</td>
       </tr></tbody></table>
-      <div style="font-size:11px;font-weight:700;color:var(--navy);text-transform:uppercase;margin-bottom:5px">Details of Fatal Accident Cases Reported in Last 24 Hours:</div>
       <table class="ptbl"><thead><tr><th>Sr.No.</th><th>FIR &amp; Date</th><th>PS Name</th><th>Brief Facts of Fatal Accident Cases</th></tr></thead>
       <tbody id="pdf-fatal"><tr><td colspan="4" style="text-align:center;color:var(--muted)">NIL — No fatal accident cases reported in last 24 hours</td></tr></tbody></table>
     </div>
-
     <div class="pdf-foot">
       <div><strong>HP Police — Traffic, Tourist &amp; Railways Wing</strong><br>DSI Consolidated Report &nbsp;|&nbsp; For Official Use Only</div>
       <div><div class="sig-line">DSP/SP Traffic (PHQ)</div></div>
@@ -354,17 +342,15 @@ tr:hover td{background:#f4f7fb;}
   <div class="sec-sub">Submitted entries log. HQ Access only.</div>
   <div class="card">
     <div class="ctitle"><span>📁</span> All Submissions Log</div>
-    <div class="tbl">
-      <table><thead><tr><th>#</th><th>District</th><th>Officer</th><th>Date</th><th>Submitted At</th><th>Action</th></tr></thead>
-      <tbody id="admin-log"><tr><td colspan="6" style="text-align:center;color:var(--muted);padding:16px">No submissions yet.</td></tr></tbody></table>
-    </div>
+    <div class="tbl"><table><thead><tr><th>#</th><th>District</th><th>Officer</th><th>Date</th><th>Submitted At</th><th>Action</th></tr></thead>
+    <tbody id="admin-log"><tr><td colspan="6" style="text-align:center;color:var(--muted);padding:16px">No submissions yet.</td></tr></tbody></table></div>
   </div>
   <div class="card red">
     <div class="ctitle"><span>⏳</span> Pending Districts</div>
     <div id="admin-pend" style="font-size:13px;line-height:2.2">All 15 districts pending.</div>
   </div>
   <div class="btn-actions">
-    <button class="btn btn-red" onclick="if(confirm('Clear ALL data? This cannot be undone.')){clearAll();}">🗑️ Clear All Data</button>
+    <button class="btn btn-red" onclick="if(confirm('Clear ALL data?')){clearAll();}">🗑️ Clear All Data</button>
   </div>
 </main>
 </div>
@@ -375,17 +361,159 @@ tr:hover td{background:#f4f7fb;}
 </footer>
 
 <script>
-// Clock
+// ── CLOCK ──
 function updateClock(){document.getElementById('clock').textContent=new Date().toLocaleString('en-IN',{weekday:'short',day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit',second:'2-digit'});}
 updateClock();setInterval(updateClock,1000);
 document.getElementById('d-date').value=new Date().toISOString().split('T')[0];
 
+// ── MOTORCYCLE DATABASE (from your document) ──
+const MOTO_DB = {
+  'Baddi (BBN)': [
+    {reg:'HP63C-7692', ps:'Traffic Wing Baddi'},
+    {reg:'HP63C-7723', ps:'Traffic Wing Nalagarh'}
+  ],
+  'Bilaspur': [
+    {reg:'HP63C-7693', ps:'PS Sadar'}
+  ],
+  'Chamba': [
+    {reg:'HP63C-7705', ps:'Traffic Wing Chamba'}
+  ],
+  'Dehra': [
+    {reg:'HP63C-7699', ps:'PS Dehra'},
+    {reg:'HP63C-7701', ps:'PS Jawalamukhi'}
+  ],
+  'Hamirpur': [
+    {reg:'HP63C-7704', ps:'Traffic Wing Hamirpur'},
+    {reg:'HP63C-7708', ps:'PS Nadaun'},
+    {reg:'HP63C-7709', ps:'PS Hamirpur'}
+  ],
+  'Kangra': [
+    {reg:'HP63C-7703', ps:'PS Kangra'},
+    {reg:'HP63C-7706', ps:'PS Dharamshala'},
+    {reg:'HP63C-7715', ps:'PS Nagrota'},
+    {reg:'HP63C-7725', ps:'PS Bhawarna'},
+    {reg:'HP63C-7727', ps:'PS Palampur'}
+  ],
+  'Kinnaur': [],
+  'Kullu': [
+    {reg:'HP63C-7694', ps:'Traffic Wing Manali'},
+    {reg:'HP63C-7695', ps:'Traffic Wing Kullu'}
+  ],
+  'Lahaul & Spiti': [],
+  'Mandi': [
+    {reg:'HP63C-7696', ps:'PS Sundernagar'},
+    {reg:'HP63C-7712', ps:'PS Balh'},
+    {reg:'HP63C-7716', ps:'PS Aut'},
+    {reg:'HP63C-7719', ps:'PS Sadar Mandi'},
+    {reg:'HP63C-7720', ps:'PS Paddar'}
+  ],
+  'Nurpur': [
+    {reg:'HP63C-6177', ps:'Kandwal to Nurpur'},
+    {reg:'HP63C-6178', ps:'Rahan to Raja ka Talab'},
+    {reg:'HP63C-6180', ps:'PS Damtal'},
+    {reg:'HP63C-6190', ps:'Talara to Baroh'},
+    {reg:'HP63C-6194', ps:'Nurpur to BhedKhad'},
+    {reg:'HP63C-6202', ps:'Fatehpur to Dhameta'}
+  ],
+  'Shimla': [
+    {reg:'HP63C-6172', ps:'PP Baghi'},
+    {reg:'HP63C-6176', ps:'PP Junga'},
+    {reg:'HP63C-6179', ps:'PS Rampur'},
+    {reg:'HP63C-6181', ps:'Traffic Wing Shimla'},
+    {reg:'HP63C-6184', ps:'PP Tikkar'},
+    {reg:'HP63C-6185', ps:'PP Taklech'},
+    {reg:'HP63C-6186', ps:'PS Sanjauli'},
+    {reg:'HP63C-6187', ps:'Traffic Wing Shimla'},
+    {reg:'HP63C-6188', ps:'PP Chhaila'},
+    {reg:'HP63C-6189', ps:'Traffic Wing Shimla'},
+    {reg:'HP63C-6191', ps:'Traffic Wing Shimla'},
+    {reg:'HP63C-6192', ps:'Traffic Wing Shimla'},
+    {reg:'HP63C-6193', ps:'Traffic Wing Shimla'},
+    {reg:'HP63C-6195', ps:'PP Dhami'},
+    {reg:'HP63C-6196', ps:'Traffic Wing/PL Kaithu'},
+    {reg:'HP63C-6197', ps:'Traffic Wing Shimla'},
+    {reg:'HP63C-6198', ps:'Traffic Wing Shimla'},
+    {reg:'HP63C-6199', ps:'Traffic Wing Shimla'}
+  ],
+  'Sirmour': [
+    {reg:'HP63C-7698', ps:'Traffic Wing Nahan'},
+    {reg:'HP63C-7718', ps:'Traffic Wing Paonta Sahib'}
+  ],
+  'Solan': [],
+  'Una': [
+    {reg:'HP63C-7702', ps:'Traffic Wing Una'},
+    {reg:'HP63C-7713', ps:'PS Haroli'},
+    {reg:'HP63C-7714', ps:'Highway Patrol'},
+    {reg:'HP63C-7726', ps:'PS Chintpurni'}
+  ]
+};
+
+// ── LOAD MOTORCYCLES WHEN DISTRICT SELECTED ──
+function loadMotorcycles() {
+  const dist = document.getElementById('d-dist').value;
+  const tb = document.getElementById('moto-tb');
+  const infoBox = document.getElementById('moto-info');
+  tb.innerHTML = '';
+
+  if (!dist) {
+    infoBox.style.display = 'block';
+    infoBox.textContent = 'ℹ️ Pehle district select karo — motorcycles automatically load ho jaayenge.';
+    return;
+  }
+
+  const bikes = MOTO_DB[dist] || [];
+  if (bikes.length === 0) {
+    infoBox.style.display = 'block';
+    infoBox.innerHTML = `ℹ️ <strong>${dist}</strong> ke liye koi motorcycle assigned nahi hai. Agar naya add karna ho toh neeche button use karo.`;
+    return;
+  }
+
+  infoBox.style.display = 'none';
+  bikes.forEach((b, i) => {
+    const tr = document.createElement('tr');
+    tr.className = 'moto-prefilled';
+    tr.innerHTML = `
+      <td style="color:var(--muted);font-size:12px">${i+1}</td>
+      <td><input type="text" value="${b.reg}" readonly style="width:140px;font-size:12px;padding:5px 8px;border:1px solid var(--border);border-radius:4px;background:#f0f4f8;color:var(--navy);font-weight:600"></td>
+      <td><input type="text" value="${b.ps}" readonly style="width:100%;font-size:12px;padding:5px 8px;border:1px solid var(--border);border-radius:4px;background:#f0f4f8;color:var(--navy);font-weight:600"></td>
+      <td><input type="number" id="km-${i}" min="0" placeholder="0" style="width:80px;font-size:13px;padding:5px 8px;border:1.5px solid var(--accent);border-radius:4px;font-weight:600"></td>
+      <td><input type="number" id="ch-${i}" min="0" placeholder="0" style="width:80px;font-size:13px;padding:5px 8px;border:1.5px solid var(--accent);border-radius:4px;font-weight:600"></td>
+    `;
+    tb.appendChild(tr);
+  });
+}
+
+// ── COLLECT MOTORCYCLE DATA ──
+function collectMoto() {
+  const dist = document.getElementById('d-dist').value;
+  const bikes = MOTO_DB[dist] || [];
+  const rows = [];
+  bikes.forEach((b, i) => {
+    const km = document.getElementById('km-'+i);
+    const ch = document.getElementById('ch-'+i);
+    rows.push({
+      reg: b.reg,
+      ps: b.ps,
+      km: km ? km.value || '00' : '00',
+      ch: ch ? ch.value || '00' : '00'
+    });
+  });
+  // Also collect manually added rows
+  document.getElementById('moto-tb').querySelectorAll('tr:not(.moto-prefilled)').forEach(tr => {
+    const r = tr.querySelector('[id^="mr-"]'), p = tr.querySelector('[id^="mp-"]');
+    const k = tr.querySelector('[id^="mk-"]'), c = tr.querySelector('[id^="mc-"]');
+    if (r && r.value) rows.push({reg:r.value, ps:p?p.value:'', km:k?k.value:'00', ch:c?c.value:'00'});
+  });
+  return rows;
+}
+
+// ── ALL DISTRICTS ──
 const ALL_DIST=['Baddi (BBN)','Bilaspur','Chamba','Dehra','Hamirpur','Kangra','Kinnaur','Kullu','Lahaul & Spiti','Mandi','Nurpur','Shimla','Sirmour','Solan','Una'];
 let submissions={};
-try{const d=localStorage.getItem('hp_dsi');if(d)submissions=JSON.parse(d);}catch(e){}
-function save(){try{localStorage.setItem('hp_dsi',JSON.stringify(submissions));}catch(e){}}
+try{const d=localStorage.getItem('hp_dsi_v2');if(d)submissions=JSON.parse(d);}catch(e){}
+function save(){try{localStorage.setItem('hp_dsi_v2',JSON.stringify(submissions));}catch(e){}}
 
-// Nav
+// ── NAV ──
 function go(p){
   document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));
   document.getElementById('page-'+p).classList.add('active');
@@ -397,34 +525,34 @@ function go(p){
   window.scrollTo({top:0,behavior:'smooth'});
 }
 
-// Dynamic rows
-let rn={itms:0,moto:0,vol:0,fatal:0};
+// ── DYNAMIC ROWS (ITMS, VOL, FATAL only) ──
+let rn={itms:0,vol:0,fatal:0,mr:0};
 function addR(t){
-  const n=++rn[t];
-  const tb=document.getElementById(t+'-tb');
-  const tr=document.createElement('tr');
-  let h=`<td style="color:var(--muted);font-size:12px">${n}</td>`;
+  const n = t==='moto' ? ++rn.mr : ++rn[t];
+  const tb = document.getElementById(t==='moto'?'moto-tb':t+'-tb');
+  const tr = document.createElement('tr');
+  let h = `<td style="color:var(--muted);font-size:12px">${n}</td>`;
   const inp=(id,w,ph,type)=>`<td><input type="${type||'text'}" id="${id}" style="width:${w};font-size:12px;padding:4px 7px;border:1px solid var(--border);border-radius:4px" placeholder="${ph}"></td>`;
   const ta=(id,ph)=>`<td><textarea id="${id}" rows="2" style="width:100%;min-width:180px;font-size:12px;padding:4px 7px;border:1px solid var(--border);border-radius:4px" placeholder="${ph}"></textarea></td>`;
-  if(t==='itms'){h+=inp(`il-${n}`,'100%','ITMS Location')+inp(`ir-${n}`,'100%','Reason for Non-Working');}
-  else if(t==='moto'){h+=inp(`mr-${n}`,'100%','Reg. No.')+inp(`mp-${n}`,'100%','PS/Beat')+inp(`mk-${n}`,'70px','0','number')+inp(`mc-${n}`,'70px','0','number');}
+  if(t==='itms'){h+=inp(`il-${n}`,'100%','ITMS Location')+inp(`ir-${n}`,'100%','Reason');}
+  else if(t==='moto'){h+=inp(`mr-${n}`,'130px','Reg. No.')+inp(`mp-${n}`,'100%','PS/Beat')+inp(`mk-${n}`,'70px','0','number')+inp(`mc-${n}`,'70px','0','number');}
   else if(t==='vol'){h+=inp(`vn-${n}`,'70px','0','number')+inp(`vp-${n}`,'100%','Place')+`<td><input type="text" id="vd-${n}" style="width:100%;font-size:12px;padding:4px 7px;border:1px solid var(--border);border-radius:4px" value="Traffic Duty"></td>`;}
-  else if(t==='fatal'){h+=inp(`ff-${n}`,'100%','FIR No. & Date')+inp(`fps-${n}`,'100%','PS Name')+ta(`fb-${n}`,'Brief Facts of Fatal Accident');}
+  else if(t==='fatal'){h+=inp(`ff-${n}`,'100%','FIR No. & Date')+inp(`fps-${n}`,'100%','PS Name')+ta(`fb-${n}`,'Brief Facts');}
   h+=`<td><button class="del-row" onclick="this.closest('tr').remove()">✕</button></td>`;
-  tr.innerHTML=h;tb.appendChild(tr);
+  tr.innerHTML=h; tb.appendChild(tr);
 }
 
 function getRows(t){
   const rows=[];
-  document.getElementById(t+'-tb').querySelectorAll('tr').forEach(tr=>{
-    if(t==='itms'){const l=tr.querySelector('[id^="il-"]'),r=tr.querySelector('[id^="ir-"]');if(l&&r&&(l.value||r.value))rows.push({loc:l.value,rsn:r.value});}
-    else if(t==='moto'){const r=tr.querySelector('[id^="mr-"]'),p=tr.querySelector('[id^="mp-"]'),k=tr.querySelector('[id^="mk-"]'),c=tr.querySelector('[id^="mc-"]');if(r&&r.value)rows.push({reg:r.value,ps:p?p.value:'',km:k?k.value:'0',ch:c?c.value:'0'});}
+  const tbId = t==='moto' ? 'moto-tb' : t+'-tb';
+  document.getElementById(tbId).querySelectorAll('tr').forEach(tr=>{
+    if(t==='itms'){const l=tr.querySelector('[id^="il-"]'),r=tr.querySelector('[id^="ir-"]');if(l&&r&&l.value)rows.push({loc:l.value,rsn:r.value});}
     else if(t==='vol'){const n=tr.querySelector('[id^="vn-"]'),p=tr.querySelector('[id^="vp-"]'),d=tr.querySelector('[id^="vd-"]');if(p&&p.value)rows.push({n:n?n.value:'0',p:p.value,d:d?d.value:'Traffic Duty'});}
     else if(t==='fatal'){const f=tr.querySelector('[id^="ff-"]'),ps=tr.querySelector('[id^="fps-"]'),b=tr.querySelector('[id^="fb-"]');if(f&&f.value)rows.push({fir:f.value,ps:ps?ps.value:'',facts:b?b.value:''});}
   });return rows;
 }
 
-// Submit district
+// ── SUBMIT ──
 function submitDistrict(){
   const date=document.getElementById('d-date').value;
   const dist=document.getElementById('d-dist').value;
@@ -442,13 +570,16 @@ function submitDistrict(){
     cctns:Number(document.getElementById('d-cctns').value)||0,
     edar:Number(document.getElementById('d-edar').value)||0,
     missing:document.getElementById('d-missing').value||'',
-    itms:getRows('itms'),moto:getRows('moto'),vol:getRows('vol'),fatal:getRows('fatal'),
+    itms:getRows('itms'),
+    moto:collectMoto(),
+    vol:getRows('vol'),
+    fatal:getRows('fatal'),
     at:new Date().toLocaleString('en-IN')
   };
   save();refreshHQ();
   const el=document.getElementById('d-success');
   el.style.display='block';
-  el.innerHTML=`✅ <strong>${dist}</strong> data submitted! Ref: DSI/${date.replace(/-/g,'')}/${dist.replace(/[^A-Z0-9]/gi,'').toUpperCase().slice(0,6)} — Now visible in HQ Dashboard.`;
+  el.innerHTML=`✅ <strong>${dist}</strong> ka data HQ ko submit ho gaya! Reference: DSI/${date.replace(/-/g,'')}/${dist.replace(/[^A-Z0-9]/gi,'').toUpperCase().slice(0,6)}`;
 }
 
 function resetDistrict(){
@@ -457,24 +588,23 @@ function resetDistrict(){
   document.getElementById('d-date').value=new Date().toISOString().split('T')[0];
   document.getElementById('d-decl').checked=false;
   ['itms-tb','moto-tb','vol-tb','fatal-tb'].forEach(id=>{const e=document.getElementById(id);if(e)e.innerHTML='';});
-  rn={itms:0,moto:0,vol:0,fatal:0};
+  document.getElementById('moto-info').style.display='block';
+  document.getElementById('moto-info').textContent='ℹ️ Pehle district select karo — motorcycles automatically load ho jaayenge.';
+  rn={itms:0,vol:0,fatal:0,mr:0};
   document.getElementById('d-success').style.display='none';
 }
 
-// Refresh HQ
+// ── REFRESH HQ ──
 function refreshHQ(){
-  // District cards
   const dg=document.getElementById('dist-grid');
   dg.innerHTML='';
   ALL_DIST.forEach(d=>{
     const s=submissions[d];
     const div=document.createElement('div');
     div.className='dist-card '+(s?'submitted':'pending');
-    div.innerHTML=`<div class="dist-name">${d}</div><div style="margin-top:4px">${s?`<span class="badge b-green">✅ Submitted</span>`:' <span class="badge b-yellow">⏳ Pending</span>'}</div>${s?`<div style="font-size:10.5px;color:var(--muted);margin-top:3px">${s.officer} &nbsp;|&nbsp; ${s.at}</div>`:''}`;
+    div.innerHTML=`<div class="dist-name">${d}</div><div style="margin-top:4px">${s?`<span class="badge b-green">✅ Submitted</span>`:'<span class="badge b-yellow">⏳ Pending</span>'}</div>${s?`<div style="font-size:10.5px;color:var(--muted);margin-top:3px">${s.officer} | ${s.at}</div>`:''}`;
     dg.appendChild(div);
   });
-
-  // Consolidated table
   const tbody=document.getElementById('hq-body');
   tbody.innerHTML='';
   let tv=0,tv2=0,tm=0,tk=0,tc=0,tvol=0,ti=0,ta=0,te=0,tf=0;
@@ -499,38 +629,24 @@ function refreshHQ(){
     }
     tbody.appendChild(tr);
   });
-
-  // Totals
   document.getElementById('t-vin').textContent=tv;document.getElementById('t-vout').textContent=tv2;
   document.getElementById('t-moto').textContent=tm;document.getElementById('t-km').textContent=tk;document.getElementById('t-ch').textContent=tc;
   document.getElementById('t-vol').textContent=tvol;document.getElementById('t-itms').textContent=ti;
   document.getElementById('t-acc').textContent=ta;document.getElementById('t-edar').textContent=te;document.getElementById('t-fat').textContent=tf;
-
-  // Stats
   const sc=Object.keys(submissions).length;
   document.getElementById('s-sub').textContent=sc;document.getElementById('s-pend').textContent=15-sc;
   document.getElementById('s-veh').textContent=tv+tv2;document.getElementById('s-acc').textContent=ta;
   document.getElementById('s-fat').textContent=tf;document.getElementById('s-ch').textContent=tc;
   document.getElementById('s-vol').textContent=tvol;document.getElementById('s-itms').textContent=ti;
-
-  // Fatal detail
   let fatals=[];Object.values(submissions).forEach(s=>s.fatal.forEach(f=>fatals.push({dist:s.dist,...f})));
-  document.getElementById('hq-fatal').innerHTML=fatals.length?
-    fatals.map((f,i)=>`<tr><td>${i+1}</td><td><strong>${f.dist}</strong></td><td>${f.fir}</td><td>${f.ps}</td><td>${f.facts}</td></tr>`).join('')
-    :`<tr><td colspan="5" style="text-align:center;color:var(--muted);padding:14px">No fatal cases reported.</td></tr>`;
-
-  // ITMS detail
+  document.getElementById('hq-fatal').innerHTML=fatals.length?fatals.map((f,i)=>`<tr><td>${i+1}</td><td><strong>${f.dist}</strong></td><td>${f.fir}</td><td>${f.ps}</td><td>${f.facts}</td></tr>`).join(''):`<tr><td colspan="5" style="text-align:center;color:var(--muted);padding:14px">No fatal cases.</td></tr>`;
   let itmsl=[];Object.values(submissions).forEach(s=>s.itms.forEach(it=>itmsl.push({dist:s.dist,...it})));
-  document.getElementById('hq-itms').innerHTML=itmsl.length?
-    itmsl.map((it,i)=>`<tr><td>${i+1}</td><td><strong>${it.dist}</strong></td><td>${it.loc}</td><td>${it.rsn}</td></tr>`).join('')
-    :`<tr><td colspan="4" style="text-align:center;color:var(--muted);padding:14px">No ITMS issues reported.</td></tr>`;
-
-  // Sub header
+  document.getElementById('hq-itms').innerHTML=itmsl.length?itmsl.map((it,i)=>`<tr><td>${i+1}</td><td><strong>${it.dist}</strong></td><td>${it.loc}</td><td>${it.rsn}</td></tr>`).join(''):`<tr><td colspan="4" style="text-align:center;color:var(--muted);padding:14px">No ITMS issues.</td></tr>`;
   const dates=[...new Set(Object.values(submissions).map(s=>s.date))];
   if(dates.length)document.getElementById('hq-sub').textContent=`Report Date: ${new Date(dates[0]).toLocaleDateString('en-IN',{day:'2-digit',month:'long',year:'numeric'})} — ${sc}/15 Districts Submitted`;
 }
 
-// Build PDF
+// ── BUILD PDF ──
 function buildPDF(){
   const subs=Object.values(submissions);
   const date=subs.length?subs[0].date:new Date().toISOString().split('T')[0];
@@ -543,40 +659,22 @@ function buildPDF(){
   document.getElementById('pdf-vin').textContent=tv;document.getElementById('pdf-vout').textContent=tv2;
   document.getElementById('pdf-cctns').textContent=ta;document.getElementById('pdf-edar').textContent=te;
   document.getElementById('pdf-missing').textContent=ml.join(', ')||'NIL';
-  // ITMS
   let il=[];subs.forEach(s=>s.itms.forEach(it=>il.push({dist:s.dist,...it})));
-  document.getElementById('pdf-itms').innerHTML=il.length?
-    il.map((it,i)=>`<tr><td>${i+1}</td><td>${it.dist}</td><td>${it.loc} — ${it.rsn}</td></tr>`).join('')+`<tr style="font-weight:700;background:#f4f7fb"><td colspan="2">Total Non-Working ITMS</td><td>${il.length}</td></tr>`
-    :`<tr><td colspan="3" style="text-align:center;color:var(--muted)">NIL</td></tr>`;
-  // Moto
+  document.getElementById('pdf-itms').innerHTML=il.length?il.map((it,i)=>`<tr><td>${i+1}</td><td>${it.dist}</td><td>${it.loc} — ${it.rsn}</td></tr>`).join('')+`<tr style="font-weight:700;background:#f4f7fb"><td colspan="2">Total</td><td>${il.length}</td></tr>`:`<tr><td colspan="3" style="text-align:center;color:var(--muted)">NIL</td></tr>`;
   let ml2=[];let tk=0,tc=0;subs.forEach(s=>s.moto.forEach(m=>ml2.push({dist:s.dist,...m})));
-  document.getElementById('pdf-moto').innerHTML=ml2.length?
-    ml2.map(m=>{tk+=Number(m.km||0);tc+=Number(m.ch||0);return`<tr><td>${m.dist}</td><td>${m.reg}</td><td>${m.ps}</td><td style="text-align:center">${m.km||'00'}</td><td style="text-align:center">${m.ch||'00'}</td></tr>`;}).join('')+
-    `<tr style="font-weight:700;background:#f4f7fb"><td colspan="3">TOTAL</td><td style="text-align:center">${tk}</td><td style="text-align:center">${tc}</td></tr>`
-    :`<tr><td colspan="5" style="text-align:center;color:var(--muted)">NIL</td></tr>`;
-  // Vol
+  document.getElementById('pdf-moto').innerHTML=ml2.length?ml2.map(m=>{tk+=Number(m.km||0);tc+=Number(m.ch||0);return`<tr><td>${m.dist}</td><td>${m.reg}</td><td>${m.ps}</td><td style="text-align:center">${m.km||'00'}</td><td style="text-align:center">${m.ch||'00'}</td></tr>`;}).join('')+`<tr style="font-weight:700;background:#f4f7fb"><td colspan="3">TOTAL</td><td style="text-align:center">${tk}</td><td style="text-align:center">${tc}</td></tr>`:`<tr><td colspan="5" style="text-align:center;color:var(--muted)">NIL</td></tr>`;
   let vl=[];let tv3=0;subs.forEach(s=>s.vol.forEach(v=>vl.push({dist:s.dist,...v})));
-  document.getElementById('pdf-vol').innerHTML=vl.length?
-    vl.map(v=>{tv3+=Number(v.n||0);return`<tr><td>${v.dist}</td><td style="text-align:center">${v.n}</td><td>${v.p}</td><td>${v.d}</td></tr>`;}).join('')+
-    `<tr style="font-weight:700;background:#f4f7fb"><td>Total</td><td style="text-align:center">${tv3}</td><td colspan="2"></td></tr>`
-    :`<tr><td colspan="4" style="text-align:center;color:var(--muted)">NIL</td></tr>`;
-  // Fatal
+  document.getElementById('pdf-vol').innerHTML=vl.length?vl.map(v=>{tv3+=Number(v.n||0);return`<tr><td>${v.dist}</td><td style="text-align:center">${v.n}</td><td>${v.p}</td><td>${v.d}</td></tr>`;}).join('')+`<tr style="font-weight:700;background:#f4f7fb"><td>Total</td><td style="text-align:center">${tv3}</td><td colspan="2"></td></tr>`:`<tr><td colspan="4" style="text-align:center;color:var(--muted)">NIL</td></tr>`;
   let fl=[];subs.forEach(s=>s.fatal.forEach(f=>fl.push({dist:s.dist,...f})));
-  document.getElementById('pdf-fatal').innerHTML=fl.length?
-    fl.map((f,i)=>`<tr><td>${i+1}</td><td>${f.fir}</td><td>${f.ps}</td><td>${f.facts}</td></tr>`).join('')
-    :`<tr><td colspan="4" style="text-align:center;color:var(--muted)">NIL — No fatal accident cases reported in last 24 hours</td></tr>`;
+  document.getElementById('pdf-fatal').innerHTML=fl.length?fl.map((f,i)=>`<tr><td>${i+1}</td><td>${f.fir}</td><td>${f.ps}</td><td>${f.facts}</td></tr>`).join(''):`<tr><td colspan="4" style="text-align:center;color:var(--muted)">NIL — No fatal cases in last 24 hours</td></tr>`;
 }
 
-// Admin
+// ── ADMIN ──
 function refreshAdmin(){
   const entries=Object.values(submissions);
-  document.getElementById('admin-log').innerHTML=entries.length?
-    entries.map((s,i)=>`<tr><td>${i+1}</td><td><strong>${s.dist}</strong></td><td>${s.officer}</td><td>${s.date}</td><td>${s.at}</td><td><button class="btn btn-sm btn-red" onclick="delEntry('${s.dist}')">🗑️</button></td></tr>`).join('')
-    :`<tr><td colspan="6" style="text-align:center;color:var(--muted);padding:16px">No submissions yet.</td></tr>`;
+  document.getElementById('admin-log').innerHTML=entries.length?entries.map((s,i)=>`<tr><td>${i+1}</td><td><strong>${s.dist}</strong></td><td>${s.officer}</td><td>${s.date}</td><td>${s.at}</td><td><button class="btn btn-sm btn-red" onclick="delEntry('${s.dist}')">🗑️</button></td></tr>`).join(''):`<tr><td colspan="6" style="text-align:center;color:var(--muted);padding:16px">No submissions yet.</td></tr>`;
   const pend=ALL_DIST.filter(d=>!submissions[d]);
-  document.getElementById('admin-pend').innerHTML=pend.length?
-    pend.map(d=>`<span class="badge b-yellow" style="margin:3px">${d}</span>`).join(' ')
-    :'<span class="badge b-green">✅ All 15 districts submitted!</span>';
+  document.getElementById('admin-pend').innerHTML=pend.length?pend.map(d=>`<span class="badge b-yellow" style="margin:3px">${d}</span>`).join(' '):'<span class="badge b-green">✅ All 15 districts submitted!</span>';
 }
 function delEntry(d){if(confirm('Delete '+d+'?')){delete submissions[d];save();refreshAdmin();refreshHQ();}}
 function clearAll(){submissions={};save();refreshAdmin();refreshHQ();}
