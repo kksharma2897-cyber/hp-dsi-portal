@@ -4,85 +4,85 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>HP Police — DSI Portal</title>
-<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Noto+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Noto+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#0a1628;--deep:#0d1f3c;--blue:#1a3a6b;--accent:#c8a84b;--gold:#e2c46a;--light:#eef1f6;--red:#c0392b;--green:#1a6b3a;--orange:#d35400;--text:#1a2a40;--muted:#6b7d95;--border:#c5cfd9;--shadow:0 4px 24px rgba(10,22,40,.12);}
+:root{--navy:#0a1628;--blue:#1a3a6b;--accent:#c8a84b;--gold:#e2c46a;--light:#eef1f6;--red:#c0392b;--green:#1a6b3a;--orange:#d35400;--text:#1a2a40;--muted:#6b7d95;--border:#c5cfd9;--sh:0 4px 20px rgba(10,22,40,.11);}
 *{box-sizing:border-box;margin:0;padding:0;}
 body{font-family:'Noto Sans',sans-serif;background:var(--light);color:var(--text);}
 .topbar{background:var(--navy);color:var(--gold);font-family:'Rajdhani',sans-serif;font-size:12px;padding:5px 16px;display:flex;justify-content:space-between;}
-header{background:linear-gradient(135deg,var(--deep),var(--blue));color:#fff;padding:14px 16px;display:flex;align-items:center;gap:12px;border-bottom:3px solid var(--accent);}
+header{background:linear-gradient(135deg,#0d1f3c,var(--blue));color:#fff;padding:13px 16px;display:flex;align-items:center;gap:12px;border-bottom:3px solid var(--accent);}
 .logo{width:50px;height:50px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;border:3px solid var(--gold);}
-.htext h1{font-family:'Rajdhani',sans-serif;font-size:17px;font-weight:700;letter-spacing:1px;text-transform:uppercase;}
-.htext .dsi{font-family:'Rajdhani',sans-serif;font-size:13px;font-weight:700;color:var(--gold);}
-.htext .sub{font-size:10px;opacity:.6;}
-.nav-tabs{background:var(--navy);display:flex;padding:0 12px;overflow-x:auto;}
-.nav-tabs button{background:none;border:none;color:rgba(255,255,255,.6);font-family:'Rajdhani',sans-serif;font-size:12px;font-weight:600;padding:10px 14px;cursor:pointer;border-bottom:3px solid transparent;white-space:nowrap;text-transform:uppercase;}
-.nav-tabs button.active{color:var(--gold);border-bottom-color:var(--accent);}
-.page{display:none;}.page.active{display:block;}
-main{max-width:960px;margin:0 auto;padding:18px 12px 60px;}
-.card{background:#fff;border-radius:8px;box-shadow:var(--shadow);padding:16px 18px;margin-bottom:14px;border-top:3px solid var(--blue);}
-.card.gold{border-top-color:var(--accent);}.card.red{border-top-color:var(--red);}.card.green{border-top-color:var(--green);}
-.ctitle{font-family:'Rajdhani',sans-serif;font-size:13px;font-weight:700;color:var(--blue);letter-spacing:.6px;text-transform:uppercase;margin-bottom:11px;display:flex;align-items:center;gap:6px;}
+.ht h1{font-family:'Rajdhani',sans-serif;font-size:17px;font-weight:700;letter-spacing:1px;text-transform:uppercase;}
+.ht .dsi{font-family:'Rajdhani',sans-serif;font-size:12px;font-weight:700;color:var(--gold);}
+.ht .sub{font-size:10px;opacity:.55;}
+nav{background:var(--navy);display:flex;padding:0 12px;overflow-x:auto;gap:2px;}
+nav button{background:none;border:none;color:rgba(255,255,255,.55);font-family:'Rajdhani',sans-serif;font-size:12px;font-weight:600;padding:10px 14px;cursor:pointer;border-bottom:3px solid transparent;white-space:nowrap;text-transform:uppercase;transition:color .2s;}
+nav button.on{color:var(--gold);border-bottom-color:var(--accent);}
+.pg{display:none;}.pg.on{display:block;}
+main{max-width:960px;margin:0 auto;padding:16px 12px 60px;}
+.card{background:#fff;border-radius:8px;box-shadow:var(--sh);padding:15px 17px;margin-bottom:13px;border-top:3px solid var(--blue);}
+.card.g{border-top-color:var(--accent);}.card.r{border-top-color:var(--red);}.card.gn{border-top-color:var(--green);}
+.ct{font-family:'Rajdhani',sans-serif;font-size:13px;font-weight:700;color:var(--blue);letter-spacing:.6px;text-transform:uppercase;margin-bottom:11px;display:flex;align-items:center;gap:5px;}
 .fg{display:flex;flex-direction:column;gap:4px;}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px 14px;}
-.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px 14px;}
-label{font-size:10.5px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;}
-label .req{color:var(--red);}
-input,select,textarea{border:1.5px solid var(--border);border-radius:5px;padding:7px 9px;font-size:13px;font-family:'Noto Sans',sans-serif;color:var(--text);background:#fafbfc;outline:none;width:100%;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:9px 13px;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:9px 13px;}
+label{font-size:10px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;}
+label .r{color:var(--red);}
+input,select,textarea{border:1.5px solid var(--border);border-radius:5px;padding:7px 9px;font-size:13px;font-family:'Noto Sans',sans-serif;color:var(--text);background:#fafbfc;outline:none;width:100%;transition:border-color .2s;}
 input:focus,select:focus,textarea:focus{border-color:var(--blue);background:#fff;}
 input[readonly]{background:#f0f4f8;color:var(--navy);font-weight:600;}
 textarea{resize:vertical;min-height:55px;}
-.btn{display:inline-flex;align-items:center;gap:5px;padding:8px 16px;border-radius:5px;font-family:'Rajdhani',sans-serif;font-size:13px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;cursor:pointer;border:2px solid transparent;}
-.btn-primary{background:var(--blue);color:#fff;}.btn-gold{background:var(--accent);color:var(--navy);}
-.btn-green{background:var(--green);color:#fff;}.btn-outline{background:transparent;color:var(--blue);border-color:var(--blue);}
-.btn-red{background:var(--red);color:#fff;}.btn-sm{padding:4px 10px;font-size:11.5px;}
-.btn-actions{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap;}
-.tbl{overflow-x:auto;}
+.btn{display:inline-flex;align-items:center;gap:5px;padding:8px 16px;border-radius:5px;font-family:'Rajdhani',sans-serif;font-size:13px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;cursor:pointer;border:2px solid transparent;}
+.bp{background:var(--blue);color:#fff;}.bg2{background:var(--accent);color:var(--navy);}
+.bgn{background:var(--green);color:#fff;}.bo{background:transparent;color:var(--blue);border-color:var(--blue);}
+.bsm{padding:4px 10px;font-size:11px;}
+.ba{display:flex;gap:7px;margin-top:11px;flex-wrap:wrap;}
+.tw{overflow-x:auto;}
 table{width:100%;border-collapse:collapse;font-size:12px;}
-th{background:var(--navy);color:var(--gold);font-family:'Rajdhani',sans-serif;font-size:11px;font-weight:600;text-transform:uppercase;padding:7px 8px;text-align:left;white-space:nowrap;}
+th{background:var(--navy);color:var(--gold);font-family:'Rajdhani',sans-serif;font-size:10.5px;font-weight:600;text-transform:uppercase;padding:7px 8px;text-align:left;white-space:nowrap;}
 td{padding:6px 8px;border-bottom:1px solid #edf0f4;vertical-align:middle;}
 tr:hover td{background:#f4f7fb;}
-.del-row{background:none;border:none;color:var(--red);cursor:pointer;font-size:14px;padding:1px 4px;}
-.add-row{display:inline-flex;align-items:center;gap:4px;margin-top:6px;background:none;border:1.5px dashed var(--blue);color:var(--blue);border-radius:5px;padding:4px 11px;font-size:12px;font-family:'Rajdhani',sans-serif;font-weight:600;cursor:pointer;}
-.badge{display:inline-block;padding:2px 8px;border-radius:20px;font-size:10.5px;font-weight:600;}
-.b-green{background:#d4edda;color:#1a6b3a;}.b-yellow{background:#fff3cd;color:#856404;}.b-red{background:#f8d7da;color:#721c24;}.b-grey{background:#e2e8f0;color:#4a5568;}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:14px;}
-.stat{background:#fff;border-radius:8px;padding:13px;box-shadow:var(--shadow);border-left:4px solid var(--blue);}
-.stat.gold{border-left-color:var(--accent);}.stat.red{border-left-color:var(--red);}.stat.green{border-left-color:var(--green);}.stat.orange{border-left-color:var(--orange);}
-.stat-num{font-family:'Rajdhani',sans-serif;font-size:24px;font-weight:700;color:var(--navy);}
-.stat-lbl{font-size:10px;color:var(--muted);text-transform:uppercase;margin-top:2px;}
-.notice{background:#fff8e6;border:1px solid #f5c842;border-radius:5px;padding:8px 11px;font-size:11.5px;color:#7a5c00;margin-bottom:11px;}
-.info-box{background:#e8f0fb;border:1px solid #b8d0f0;border-radius:5px;padding:8px 11px;font-size:11.5px;color:#1a3a6b;margin-bottom:11px;}
-.alert-s{background:#d4edda;border-left:4px solid var(--green);border-radius:5px;padding:10px 13px;font-size:12.5px;color:var(--green);margin-top:11px;}
-.alert-e{background:#f8d7da;border-left:4px solid var(--red);border-radius:5px;padding:10px 13px;font-size:12.5px;color:var(--red);margin-top:11px;}
-.dist-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px;margin-bottom:12px;}
-.dist-card{background:#fff;border-radius:6px;padding:9px 12px;box-shadow:0 2px 6px rgba(0,0,0,.07);border-left:4px solid var(--border);}
-.dist-card.submitted{border-left-color:var(--green);}.dist-card.pending{border-left-color:var(--orange);}
-.dist-name{font-family:'Rajdhani',sans-serif;font-size:12px;font-weight:700;color:var(--navy);text-transform:uppercase;}
-.loading{display:inline-block;width:16px;height:16px;border:2px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;animation:spin .8s linear infinite;vertical-align:middle;margin-right:5px;}
-@keyframes spin{to{transform:rotate(360deg)}}
-.sec-title{font-family:'Rajdhani',sans-serif;font-size:17px;font-weight:700;color:var(--navy);letter-spacing:1px;text-transform:uppercase;margin-bottom:3px;}
-.sec-sub{font-size:12px;color:var(--muted);margin-bottom:14px;}
+.dr{background:none;border:none;color:var(--red);cursor:pointer;font-size:14px;padding:1px 4px;}
+.ar{display:inline-flex;align-items:center;gap:4px;margin-top:6px;background:none;border:1.5px dashed var(--blue);color:var(--blue);border-radius:5px;padding:4px 11px;font-size:12px;font-family:'Rajdhani',sans-serif;font-weight:600;cursor:pointer;}
+.bx{display:inline-block;padding:2px 8px;border-radius:20px;font-size:10px;font-weight:600;}
+.bxg{background:#d4edda;color:#1a6b3a;}.bxy{background:#fff3cd;color:#856404;}.bxr{background:#f8d7da;color:#721c24;}.bxgr{background:#e2e8f0;color:#4a5568;}
+.sts{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:9px;margin-bottom:13px;}
+.st{background:#fff;border-radius:7px;padding:12px;box-shadow:var(--sh);border-left:4px solid var(--blue);}
+.st.g{border-left-color:var(--accent);}.st.r{border-left-color:var(--red);}.st.gn{border-left-color:var(--green);}.st.or{border-left-color:var(--orange);}
+.sn{font-family:'Rajdhani',sans-serif;font-size:24px;font-weight:700;color:var(--navy);}
+.sl{font-size:10px;color:var(--muted);text-transform:uppercase;margin-top:2px;}
+.ntc{background:#fff8e6;border:1px solid #f5c842;border-radius:5px;padding:8px 11px;font-size:11px;color:#7a5c00;margin-bottom:11px;}
+.inf{background:#e8f0fb;border:1px solid #b8d0f0;border-radius:5px;padding:8px 11px;font-size:11px;color:#1a3a6b;margin-bottom:11px;}
+.as{background:#d4edda;border-left:4px solid var(--green);border-radius:5px;padding:9px 13px;font-size:12.5px;color:var(--green);margin-top:11px;}
+.ae{background:#f8d7da;border-left:4px solid var(--red);border-radius:5px;padding:9px 13px;font-size:12.5px;color:var(--red);margin-top:11px;}
+.dg{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin-bottom:12px;}
+.dc{background:#fff;border-radius:6px;padding:9px 11px;box-shadow:0 2px 6px rgba(0,0,0,.07);border-left:4px solid var(--border);}
+.dc.sub{border-left-color:var(--green);}.dc.pen{border-left-color:var(--orange);}
+.dn{font-family:'Rajdhani',sans-serif;font-size:12px;font-weight:700;color:var(--navy);text-transform:uppercase;}
+.ld{display:inline-block;width:15px;height:15px;border:2px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;animation:sp .8s linear infinite;vertical-align:middle;margin-right:4px;}
+@keyframes sp{to{transform:rotate(360deg)}}
+.st2{font-family:'Rajdhani',sans-serif;font-size:16px;font-weight:700;color:var(--navy);letter-spacing:1px;text-transform:uppercase;margin-bottom:3px;}
+.ss2{font-size:11.5px;color:var(--muted);margin-bottom:13px;}
 /* PDF */
-.pdf-wrap{background:#fff;max-width:760px;margin:0 auto;box-shadow:0 2px 20px rgba(0,0,0,.15);padding:22px 26px;border-radius:4px;font-size:12px;}
-.pdf-h{display:flex;align-items:center;gap:11px;border-bottom:3px double var(--navy);padding-bottom:11px;margin-bottom:11px;}
-.pdf-logo{width:48px;height:48px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
-.pdf-ht h2{font-family:'Rajdhani',sans-serif;font-size:15px;font-weight:700;text-transform:uppercase;color:var(--navy);}
-.pdf-ht p{font-size:11px;color:var(--muted);}
-.pdf-ref{margin-left:auto;text-align:right;font-size:11px;}
-.pdf-ref strong{display:block;font-family:'Rajdhani',sans-serif;font-size:13px;color:var(--navy);}
-.pdf-sec h3{font-family:'Rajdhani',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;color:#fff;background:var(--navy);padding:3px 8px;margin-bottom:6px;}
-.pdf-sec{margin-bottom:11px;}
-.ptbl{width:100%;border-collapse:collapse;font-size:11px;margin-bottom:6px;}
-.ptbl th{background:#e8edf5;color:var(--navy);font-weight:700;padding:4px 7px;border:1px solid #bbb;font-size:10px;text-transform:uppercase;}
-.ptbl td{padding:4px 7px;border:1px solid #ccc;vertical-align:top;}
-.pdf-foot{border-top:2px solid var(--navy);margin-top:12px;padding-top:8px;display:flex;justify-content:space-between;font-size:10px;color:var(--muted);}
-.sig-line{border-top:1.5px solid var(--navy);width:140px;margin-left:auto;padding-top:3px;font-size:10px;color:var(--navy);font-weight:600;text-transform:uppercase;text-align:center;}
-@media(max-width:580px){.grid2,.grid3{grid-template-columns:1fr;}header{flex-wrap:wrap;}.stats{grid-template-columns:1fr 1fr;}}
+.pw{background:#fff;max-width:740px;margin:0 auto;box-shadow:0 2px 18px rgba(0,0,0,.14);padding:20px 24px;border-radius:4px;font-size:11.5px;}
+.ph{display:flex;align-items:center;gap:10px;border-bottom:3px double var(--navy);padding-bottom:10px;margin-bottom:10px;}
+.pl{width:46px;height:46px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;font-size:19px;flex-shrink:0;}
+.pht h2{font-family:'Rajdhani',sans-serif;font-size:14px;font-weight:700;text-transform:uppercase;color:var(--navy);}
+.pht p{font-size:10.5px;color:var(--muted);}
+.pr{margin-left:auto;text-align:right;font-size:10.5px;}
+.pr strong{display:block;font-family:'Rajdhani',sans-serif;font-size:12px;color:var(--navy);}
+.ps h3{font-family:'Rajdhani',sans-serif;font-size:10.5px;font-weight:700;text-transform:uppercase;color:#fff;background:var(--navy);padding:3px 8px;margin-bottom:5px;}
+.ps{margin-bottom:10px;}
+.pt{width:100%;border-collapse:collapse;font-size:10.5px;margin-bottom:6px;}
+.pt th{background:#e8edf5;color:var(--navy);font-weight:700;padding:4px 6px;border:1px solid #bbb;font-size:9.5px;text-transform:uppercase;}
+.pt td{padding:4px 6px;border:1px solid #ccc;vertical-align:top;}
+.pf{border-top:2px solid var(--navy);margin-top:11px;padding-top:8px;display:flex;justify-content:space-between;font-size:9.5px;color:var(--muted);}
+.si{border-top:1.5px solid var(--navy);width:130px;margin-left:auto;padding-top:3px;font-size:9.5px;color:var(--navy);font-weight:600;text-transform:uppercase;text-align:center;}
+@media(max-width:560px){.g2,.g3{grid-template-columns:1fr;}header{flex-wrap:wrap;}.sts{grid-template-columns:1fr 1fr;}}
 @media print{
-  .nav-tabs,.topbar,.btn-actions,.add-row,.del-row,#page-form,#page-hq,#page-admin{display:none!important;}
-  #page-pdf{display:block!important;}
-  body{background:#fff;}.pdf-wrap{box-shadow:none!important;}
+  nav,.topbar,.ba,.ar,.dr,#pg-form,#pg-hq,#pg-admin{display:none!important;}
+  #pg-pdf{display:block!important;}
+  body{background:#fff;}.pw{box-shadow:none!important;}
 }
 </style>
 </head>
@@ -90,43 +90,38 @@ tr:hover td{background:#f4f7fb;}
 
 <div class="topbar">
   <span>🇮🇳 Himachal Pradesh Police &nbsp;|&nbsp; Traffic, Tourist &amp; Railways Wing</span>
-  <span id="clock"></span>
+  <span id="clk"></span>
 </div>
 
 <header>
   <div class="logo">🚦</div>
-  <div class="htext">
+  <div class="ht">
     <h1>HP Police — DSI Portal</h1>
     <div class="dsi">Daily Situation Report &nbsp;|&nbsp; 15 Districts → HQ</div>
     <div class="sub">District data fill karo → Google Sheet mein auto save</div>
   </div>
 </header>
 
-<div class="nav-tabs">
-  <button class="active" onclick="go('form')">📋 DSI Form</button>
+<nav>
+  <button class="on" onclick="go('form')">📋 DSI Form</button>
   <button onclick="go('hq')">📊 HQ Dashboard</button>
-  <button onclick="go('pdf')">📄 PDF Report</button>
+  <button onclick="go('pdf')">📄 PDF</button>
   <button onclick="go('admin')">🛡️ Admin</button>
-</div>
+</nav>
 
-<!-- ══ DSI FORM PAGE ══ -->
-<div id="page-form" class="page active">
+<!-- ══ FORM ══ -->
+<div id="pg-form" class="pg on">
 <main>
-  <div class="sec-title">DSI Report — Data Entry</div>
-  <div class="sec-sub">Apna district select karo aur data bharo. Submit hone par HQ Google Sheet mein save ho jaayega.</div>
+  <div class="st2">DSI Report — Data Entry</div>
+  <div class="ss2">Apna district select karo, data bharo, submit karo.</div>
 
-  <!-- REPORT HEADER -->
   <div class="card">
-    <div class="ctitle"><span>📌</span> Report Header</div>
-    <div class="grid3">
-      <div class="fg">
-        <label>Report Date <span class="req">*</span></label>
-        <input type="date" id="d-date">
-      </div>
-      <div class="fg">
-        <label>District <span class="req">*</span></label>
-        <select id="d-dist" onchange="onDistrictChange()">
-          <option value="">— Apna District Select Karo —</option>
+    <div class="ct"><span>📌</span> Report Header</div>
+    <div class="g3">
+      <div class="fg"><label>Date <span class="r">*</span></label><input type="date" id="f-date"></div>
+      <div class="fg"><label>District <span class="r">*</span></label>
+        <select id="f-dist" onchange="loadBikes()">
+          <option value="">— District Select Karo —</option>
           <option>Baddi (BBN)</option><option>Bilaspur</option><option>Chamba</option>
           <option>Dehra</option><option>Hamirpur</option><option>Kangra</option>
           <option>Kinnaur</option><option>Kullu</option><option>Lahaul &amp; Spiti</option>
@@ -134,186 +129,154 @@ tr:hover td{background:#f4f7fb;}
           <option>Sirmour</option><option>Solan</option><option>Una</option>
         </select>
       </div>
-      <div class="fg">
-        <label>Reporting Officer <span class="req">*</span></label>
-        <input type="text" id="d-officer" placeholder="Full Name">
-      </div>
-      <div class="fg">
-        <label>Rank <span class="req">*</span></label>
-        <select id="d-rank">
+      <div class="fg"><label>Officer Name <span class="r">*</span></label><input type="text" id="f-off" placeholder="Full Name"></div>
+      <div class="fg"><label>Rank <span class="r">*</span></label>
+        <select id="f-rank">
           <option value="">— Select —</option>
           <option>Constable</option><option>Head Constable</option><option>ASI</option>
           <option>Sub-Inspector</option><option>Inspector</option><option>DSP</option><option>SP</option>
         </select>
       </div>
-      <div class="fg">
-        <label>Badge No.</label>
-        <input type="text" id="d-badge" placeholder="HP-XXXX-XXXX">
-      </div>
-      <div class="fg">
-        <label>Shift</label>
-        <select id="d-shift">
-          <option>Full Day (24 Hrs)</option>
-          <option>Morning (06:00–14:00)</option>
-          <option>Afternoon (14:00–22:00)</option>
-          <option>Night (22:00–06:00)</option>
+      <div class="fg"><label>Badge No.</label><input type="text" id="f-badge" placeholder="HP-XXXX-XXXX"></div>
+      <div class="fg"><label>Shift</label>
+        <select id="f-shift">
+          <option>Full Day (24 Hrs)</option><option>Morning (06:00–14:00)</option>
+          <option>Afternoon (14:00–22:00)</option><option>Night (22:00–06:00)</option>
         </select>
       </div>
     </div>
   </div>
 
-  <!-- SECTION 1 -->
-  <div class="card gold">
-    <div class="ctitle"><span>🚗</span> Section 1 — Vehicle Entry/Exit &amp; Non-Working ITMS</div>
-    <div class="grid2" style="margin-bottom:11px">
-      <div class="fg"><label>Vehicles Entered (Last 24 Hrs)</label><input type="number" id="d-vin" placeholder="0" min="0"></div>
-      <div class="fg"><label>Vehicles Exited (Last 24 Hrs)</label><input type="number" id="d-vout" placeholder="0" min="0"></div>
+  <div class="card g">
+    <div class="ct"><span>🚗</span> Section 1 — Vehicle Entry/Exit &amp; Non-Working ITMS</div>
+    <div class="g2" style="margin-bottom:11px">
+      <div class="fg"><label>Vehicles Entered (24 Hrs)</label><input type="number" id="f-vin" placeholder="0" min="0"></div>
+      <div class="fg"><label>Vehicles Exited (24 Hrs)</label><input type="number" id="f-vout" placeholder="0" min="0"></div>
     </div>
-    <div style="font-size:11px;font-weight:700;color:var(--navy);text-transform:uppercase;margin-bottom:6px">Non-Working ITMS (if any)</div>
-    <div class="tbl"><table><thead><tr><th>#</th><th>ITMS Location</th><th>Reason</th><th></th></tr></thead><tbody id="itms-tb"></tbody></table></div>
-    <button class="add-row" onclick="addR('itms')">＋ Add ITMS Row</button>
+    <div style="font-size:10.5px;font-weight:700;color:var(--navy);text-transform:uppercase;margin-bottom:6px">Non-Working ITMS</div>
+    <div class="tw"><table><thead><tr><th>#</th><th>ITMS Location</th><th>Reason</th><th></th></tr></thead><tbody id="itms-tb"></tbody></table></div>
+    <button class="ar" onclick="addR('itms')">＋ Add ITMS</button>
   </div>
 
-  <!-- SECTION 2 -->
   <div class="card">
-    <div class="ctitle"><span>🏍️</span> Section 2 — Motorcycle Status (World Bank Project)</div>
-    <div class="info-box" id="moto-info">ℹ️ District select karo — motorcycles automatically load honge.</div>
-    <div class="tbl">
-      <table>
-        <thead><tr>
-          <th>#</th>
-          <th>Reg. No. <span style="color:var(--accent)">(Pre-filled)</span></th>
-          <th>PS / Beat <span style="color:var(--accent)">(Pre-filled)</span></th>
-          <th>Patrolling KMs <span style="color:#f5c842">★ Fill karo</span></th>
-          <th>Challans <span style="color:#f5c842">★ Fill karo</span></th>
-        </tr></thead>
-        <tbody id="moto-tb"></tbody>
-      </table>
+    <div class="ct"><span>🏍️</span> Section 2 — Motorcycle Status (World Bank)</div>
+    <div class="inf" id="bike-info">ℹ️ Pehle district select karo.</div>
+    <div class="tw">
+      <table><thead><tr>
+        <th>#</th><th>Reg. No.</th><th>PS / Beat</th>
+        <th>Patrolling KMs <span style="color:#f5c842">★</span></th>
+        <th>Challans <span style="color:#f5c842">★</span></th>
+      </tr></thead><tbody id="bike-tb"></tbody></table>
     </div>
   </div>
 
-  <!-- SECTION 3 -->
   <div class="card">
-    <div class="ctitle"><span>🦺</span> Section 3 — Traffic Volunteers Deployed</div>
-    <div class="tbl"><table><thead><tr><th>#</th><th>No. of Volunteers</th><th>Place of Deployment</th><th>Nature of Duty</th><th></th></tr></thead><tbody id="vol-tb"></tbody></table></div>
-    <button class="add-row" onclick="addR('vol')">＋ Add Volunteer Entry</button>
+    <div class="ct"><span>🦺</span> Section 3 — Traffic Volunteers</div>
+    <div class="tw"><table><thead><tr><th>#</th><th>No. of Volunteers</th><th>Place</th><th>Duty</th><th></th></tr></thead><tbody id="vol-tb"></tbody></table></div>
+    <button class="ar" onclick="addR('vol')">＋ Add Volunteer</button>
   </div>
 
-  <!-- SECTION 4 -->
-  <div class="card red">
-    <div class="ctitle"><span>🚨</span> Section 4 — Accident Cases</div>
-    <div class="grid3" style="margin-bottom:11px">
-      <div class="fg"><label>Accidents in CCTNS</label><input type="number" id="d-cctns" placeholder="0" min="0"></div>
-      <div class="fg"><label>Accidents in e-DAR</label><input type="number" id="d-edar" placeholder="0" min="0"></div>
-      <div class="fg"><label>NOT in e-DAR</label><input type="text" id="d-missing" placeholder="e.g. PS=01"></div>
+  <div class="card r">
+    <div class="ct"><span>🚨</span> Section 4 — Accident Cases</div>
+    <div class="g3" style="margin-bottom:11px">
+      <div class="fg"><label>Accidents in CCTNS</label><input type="number" id="f-cctns" placeholder="0" min="0"></div>
+      <div class="fg"><label>Accidents in e-DAR</label><input type="number" id="f-edar" placeholder="0" min="0"></div>
+      <div class="fg"><label>NOT in e-DAR</label><input type="text" id="f-miss" placeholder="e.g. Baddi=01"></div>
     </div>
-    <div style="font-size:11px;font-weight:700;color:var(--navy);text-transform:uppercase;margin-bottom:6px">Fatal Cases (Last 24 Hours)</div>
-    <div class="tbl"><table><thead><tr><th>#</th><th>FIR No. &amp; Date</th><th>PS Name</th><th>Brief Facts</th><th></th></tr></thead><tbody id="fatal-tb"></tbody></table></div>
-    <button class="add-row" onclick="addR('fatal')">＋ Add Fatal Case</button>
+    <div style="font-size:10.5px;font-weight:700;color:var(--navy);text-transform:uppercase;margin-bottom:6px">Fatal Cases (Last 24 Hrs)</div>
+    <div class="tw"><table><thead><tr><th>#</th><th>FIR No. &amp; Date</th><th>PS Name</th><th>Brief Facts</th><th></th></tr></thead><tbody id="fat-tb"></tbody></table></div>
+    <button class="ar" onclick="addR('fat')">＋ Add Fatal Case</button>
   </div>
 
-  <!-- SUBMIT -->
-  <div class="card green">
-    <div class="ctitle"><span>✅</span> HQ ko Submit Karo</div>
-    <div style="font-size:12px;background:#f7f9fb;border:1px solid var(--border);border-radius:5px;padding:10px 13px;margin-bottom:10px">
-      Main yeh declare karta/karti hoon ki upar di gayi jaankari sahi aur sach hai.
+  <div class="card gn">
+    <div class="ct"><span>✅</span> Submit to HQ</div>
+    <div style="font-size:11.5px;background:#f7f9fb;border:1px solid var(--border);border-radius:5px;padding:10px 13px;margin-bottom:10px">
+      Main declare karta/karti hoon ki upar di gayi jaankari bilkul sahi hai.
     </div>
-    <label style="display:flex;align-items:center;gap:7px;font-size:12.5px;font-weight:400;text-transform:none;letter-spacing:0;color:var(--text);cursor:pointer">
-      <input type="checkbox" id="d-decl"> &nbsp;Declaration accept karta/karti hoon
+    <label style="display:flex;align-items:center;gap:7px;font-size:12px;font-weight:400;text-transform:none;letter-spacing:0;cursor:pointer">
+      <input type="checkbox" id="f-decl"> Declaration accept karta/karti hoon
     </label>
-    <div class="btn-actions">
-      <button class="btn btn-green" onclick="submitDSI()" id="submit-btn">📤 Google Sheet mein Submit Karo</button>
-      <button class="btn btn-outline" onclick="resetForm()">🔄 Reset</button>
+    <div class="ba">
+      <button class="btn bgn" id="sub-btn" onclick="submitForm()">📤 Google Sheet mein Submit</button>
+      <button class="btn bo" onclick="resetForm()">🔄 Reset</button>
     </div>
-    <div id="submit-msg" style="display:none"></div>
+    <div id="sub-msg" style="display:none"></div>
   </div>
 </main>
 </div>
 
-<!-- ══ HQ DASHBOARD PAGE ══ -->
-<div id="page-hq" class="page">
+<!-- ══ HQ DASHBOARD ══ -->
+<div id="pg-hq" class="pg">
 <main>
-  <div class="sec-title">HQ Consolidated Dashboard</div>
-  <div class="sec-sub">Google Sheet se live data. Refresh karke dekhein.</div>
-
-  <div style="display:flex;gap:10px;margin-bottom:12px;flex-wrap:wrap;align-items:flex-end">
-    <div class="fg" style="flex:1;min-width:150px">
-      <label>Date filter</label>
-      <input type="date" id="hq-date">
-    </div>
-    <button class="btn btn-primary" onclick="loadHQ()">🔄 Load Data</button>
-    <button class="btn btn-gold" onclick="go('pdf');buildPDF()">📄 PDF Banao</button>
+  <div class="st2">HQ Consolidated Dashboard</div>
+  <div class="ss2">Google Sheet se live data. Date select karo aur load karo.</div>
+  <div style="display:flex;gap:9px;margin-bottom:12px;align-items:flex-end;flex-wrap:wrap">
+    <div class="fg" style="flex:1;min-width:140px"><label>Report Date</label><input type="date" id="hq-dt"></div>
+    <button class="btn bp" onclick="loadHQ()">🔄 Load Data</button>
+    <button class="btn bg2" onclick="go('pdf');makePDF()">📄 PDF Banao</button>
   </div>
-
-  <div id="hq-loader" style="text-align:center;padding:30px;color:var(--muted);background:#fff;border-radius:8px;box-shadow:var(--shadow)">
-    Date select karo aur "Load Data" dabao
+  <div id="hq-load" style="text-align:center;padding:28px;color:var(--muted);background:#fff;border-radius:8px;box-shadow:var(--sh)">
+    Date select karo aur Load Data dabao
   </div>
-
-  <div id="hq-content" style="display:none">
-    <div class="stats">
-      <div class="stat"><div class="stat-num" id="s-sub">0</div><div class="stat-lbl">Submitted</div></div>
-      <div class="stat orange"><div class="stat-num" id="s-pend">15</div><div class="stat-lbl">Pending</div></div>
-      <div class="stat gold"><div class="stat-num" id="s-veh">0</div><div class="stat-lbl">Vehicles</div></div>
-      <div class="stat red"><div class="stat-num" id="s-acc">0</div><div class="stat-lbl">Accidents</div></div>
-      <div class="stat red"><div class="stat-num" id="s-fat">0</div><div class="stat-lbl">Fatal</div></div>
-      <div class="stat"><div class="stat-num" id="s-ch">0</div><div class="stat-lbl">Challans</div></div>
-      <div class="stat green"><div class="stat-num" id="s-vol">0</div><div class="stat-lbl">Volunteers</div></div>
-      <div class="stat red"><div class="stat-num" id="s-itms">0</div><div class="stat-lbl">ITMS Issues</div></div>
+  <div id="hq-con" style="display:none">
+    <div class="sts">
+      <div class="st"><div class="sn" id="ss-sub">0</div><div class="sl">Submitted</div></div>
+      <div class="st or"><div class="sn" id="ss-pen">15</div><div class="sl">Pending</div></div>
+      <div class="st g"><div class="sn" id="ss-veh">0</div><div class="sl">Vehicles</div></div>
+      <div class="st r"><div class="sn" id="ss-acc">0</div><div class="sl">Accidents</div></div>
+      <div class="st r"><div class="sn" id="ss-fat">0</div><div class="sl">Fatal</div></div>
+      <div class="st"><div class="sn" id="ss-ch">0</div><div class="sl">Challans</div></div>
+      <div class="st gn"><div class="sn" id="ss-vol">0</div><div class="sl">Volunteers</div></div>
+      <div class="st r"><div class="sn" id="ss-itms">0</div><div class="sl">ITMS Issues</div></div>
     </div>
-
     <div class="card">
-      <div class="ctitle"><span>🗺️</span> District Status</div>
-      <div class="dist-grid" id="dist-grid"></div>
+      <div class="ct"><span>🗺️</span> District Status</div>
+      <div class="dg" id="dg"></div>
     </div>
-
     <div class="card">
-      <div class="ctitle"><span>📊</span> Consolidated Summary</div>
-      <div class="tbl">
+      <div class="ct"><span>📊</span> Consolidated Table</div>
+      <div class="tw">
         <table>
           <thead><tr><th>District</th><th>Officer</th><th>Veh In</th><th>Veh Out</th><th>Motos</th><th>KMs</th><th>Challans</th><th>Volunteers</th><th>ITMS❌</th><th>Accidents</th><th>e-DAR</th><th>Fatal</th></tr></thead>
-          <tbody id="hq-body"></tbody>
+          <tbody id="hq-tb"></tbody>
           <tfoot><tr style="background:#e8f0fb;font-weight:700;font-family:'Rajdhani',sans-serif">
             <td colspan="2">TOTAL</td>
-            <td id="t-vin">0</td><td id="t-vout">0</td><td id="t-moto">0</td><td id="t-km">0</td><td id="t-ch">0</td>
-            <td id="t-vol">0</td><td id="t-itms">0</td><td id="t-acc">0</td><td id="t-edar">0</td><td id="t-fat">0</td>
+            <td id="t-vi">0</td><td id="t-vo">0</td><td id="t-mo">0</td><td id="t-km">0</td><td id="t-ch">0</td>
+            <td id="t-vl">0</td><td id="t-it">0</td><td id="t-ac">0</td><td id="t-ed">0</td><td id="t-fa">0</td>
           </tr></tfoot>
         </table>
       </div>
     </div>
-
-    <div class="card red">
-      <div class="ctitle"><span>🚨</span> Fatal Cases — All Districts</div>
-      <div class="tbl"><table><thead><tr><th>#</th><th>District</th><th>FIR No. &amp; Date</th><th>PS Name</th><th>Brief Facts</th></tr></thead>
-      <tbody id="hq-fatal"></tbody></table></div>
+    <div class="card r">
+      <div class="ct"><span>🚨</span> Fatal Cases — All Districts</div>
+      <div class="tw"><table><thead><tr><th>#</th><th>District</th><th>FIR No. &amp; Date</th><th>PS Name</th><th>Brief Facts</th></tr></thead><tbody id="hq-fat"></tbody></table></div>
     </div>
-
-    <div class="card gold">
-      <div class="ctitle"><span>⚠️</span> Non-Working ITMS — All Districts</div>
-      <div class="tbl"><table><thead><tr><th>#</th><th>District</th><th>ITMS Location</th><th>Reason</th></tr></thead>
-      <tbody id="hq-itms"></tbody></table></div>
+    <div class="card g">
+      <div class="ct"><span>⚠️</span> Non-Working ITMS</div>
+      <div class="tw"><table><thead><tr><th>#</th><th>District</th><th>ITMS Location</th><th>Reason</th></tr></thead><tbody id="hq-itms"></tbody></table></div>
     </div>
   </div>
 </main>
 </div>
 
-<!-- ══ PDF PAGE ══ -->
-<div id="page-pdf" class="page">
+<!-- ══ PDF ══ -->
+<div id="pg-pdf" class="pg">
 <main>
-  <div class="sec-title">📄 Consolidated DSI Report</div>
-  <div class="sec-sub">Print → Save as PDF.</div>
-  <div class="btn-actions" style="margin-bottom:14px">
-    <button class="btn btn-primary" onclick="window.print()">🖨️ Print / Save as PDF</button>
-    <button class="btn btn-outline" onclick="go('hq')">← Back</button>
+  <div class="st2">📄 Consolidated DSI Report</div>
+  <div class="ss2">Print → Save as PDF karo.</div>
+  <div class="ba" style="margin-bottom:13px">
+    <button class="btn bp" onclick="window.print()">🖨️ Print / Save as PDF</button>
+    <button class="btn bo" onclick="go('hq')">← Back</button>
   </div>
-  <div class="pdf-wrap">
-    <div class="pdf-h">
-      <div class="pdf-logo">🚦</div>
-      <div class="pdf-ht"><h2>Himachal Pradesh Police</h2><p>Traffic, Tourist &amp; Railways Wing &nbsp;|&nbsp; DSI — Daily Situation Report</p></div>
-      <div class="pdf-ref"><strong id="pdf-ref">—</strong><br><span id="pdf-date2">—</span><br><span style="font-size:9px;color:var(--muted)">Generated: <span id="pdf-gen">—</span></span></div>
+  <div class="pw">
+    <div class="ph">
+      <div class="pl">🚦</div>
+      <div class="pht"><h2>Himachal Pradesh Police</h2><p>Traffic, Tourist &amp; Railways Wing &nbsp;|&nbsp; DSI — Daily Situation Report</p></div>
+      <div class="pr"><strong id="p-ref">—</strong><span id="p-dt">—</span><br><span style="font-size:9px;color:var(--muted)">Generated: <span id="p-gen">—</span></span></div>
     </div>
-    <div class="pdf-sec">
+    <div class="ps">
       <h3>📋 Contents</h3>
-      <table class="ptbl"><thead><tr><th>Sr.</th><th>Title</th><th>Page</th></tr></thead>
+      <table class="pt"><thead><tr><th>Sr.</th><th>Title</th><th>Page</th></tr></thead>
       <tbody>
         <tr><td>1.</td><td>Vehicle Entry/Exit Status and Status of ITMS (Non-Working)</td><td>2-3</td></tr>
         <tr><td>2.</td><td>Status of Motorcycle Under World Bank Project</td><td>3-4</td></tr>
@@ -322,356 +285,283 @@ tr:hover td{background:#f4f7fb;}
         <tr><td>5.</td><td>Fatal Accident Cases</td><td>4</td></tr>
       </tbody></table>
     </div>
-    <div class="pdf-sec">
+    <div class="ps">
       <h3>🚗 Section 1 — Vehicle Entry/Exit &amp; Non-Working ITMS</h3>
-      <div style="display:flex;gap:22px;margin-bottom:8px">
-        <div><div style="font-size:9px;text-transform:uppercase;color:var(--muted);font-weight:600">Total Vehicles Entered</div><div style="font-size:17px;font-family:'Rajdhani',sans-serif;font-weight:700;color:var(--navy)" id="pdf-vin">—</div></div>
-        <div><div style="font-size:9px;text-transform:uppercase;color:var(--muted);font-weight:600">Total Vehicles Exited</div><div style="font-size:17px;font-family:'Rajdhani',sans-serif;font-weight:700;color:var(--navy)" id="pdf-vout">—</div></div>
+      <div style="display:flex;gap:20px;margin-bottom:7px">
+        <div><div style="font-size:9px;text-transform:uppercase;color:var(--muted);font-weight:600">Vehicles Entered</div><div style="font-size:16px;font-family:'Rajdhani',sans-serif;font-weight:700;color:var(--navy)" id="p-vi">—</div></div>
+        <div><div style="font-size:9px;text-transform:uppercase;color:var(--muted);font-weight:600">Vehicles Exited</div><div style="font-size:16px;font-family:'Rajdhani',sans-serif;font-weight:700;color:var(--navy)" id="p-vo">—</div></div>
       </div>
-      <table class="ptbl"><thead><tr><th>Sr.No.</th><th>District</th><th>Non-Working ITMS Location &amp; Reason</th></tr></thead>
-      <tbody id="pdf-itms"><tr><td colspan="3" style="text-align:center;color:var(--muted)">NIL</td></tr></tbody></table>
+      <table class="pt"><thead><tr><th>Sr.No.</th><th>District</th><th>Non-Working ITMS Location &amp; Reason</th></tr></thead>
+      <tbody id="p-itms"><tr><td colspan="3" style="text-align:center;color:var(--muted)">NIL</td></tr></tbody></table>
     </div>
-    <div class="pdf-sec">
-      <h3>🏍️ Section 2 — Status of Motorcycle (World Bank Project)</h3>
-      <table class="ptbl"><thead><tr><th>District</th><th>Motorcycle Reg. No.</th><th>Police Station &amp; Beat</th><th>Patrolling (KMs)</th><th>Challans (24 Hrs)</th></tr></thead>
-      <tbody id="pdf-moto"><tr><td colspan="5" style="text-align:center;color:var(--muted)">NIL</td></tr></tbody></table>
+    <div class="ps">
+      <h3>🏍️ Section 2 — Motorcycle Status (World Bank Project)</h3>
+      <table class="pt"><thead><tr><th>District</th><th>Reg. No.</th><th>PS / Beat</th><th>Patrolling (KMs)</th><th>Challans (24 Hrs)</th></tr></thead>
+      <tbody id="p-moto"><tr><td colspan="5" style="text-align:center;color:var(--muted)">NIL</td></tr></tbody></table>
     </div>
-    <div class="pdf-sec">
+    <div class="ps">
       <h3>🦺 Section 3 — Traffic Volunteers Deployed</h3>
-      <table class="ptbl"><thead><tr><th>District</th><th>No. Deployed</th><th>Place of Deployment</th><th>Nature of Duty</th></tr></thead>
-      <tbody id="pdf-vol"><tr><td colspan="4" style="text-align:center;color:var(--muted)">NIL</td></tr></tbody></table>
+      <table class="pt"><thead><tr><th>District</th><th>No. Deployed</th><th>Place of Deployment</th><th>Nature of Duty</th></tr></thead>
+      <tbody id="p-vol"><tr><td colspan="4" style="text-align:center;color:var(--muted)">NIL</td></tr></tbody></table>
     </div>
-    <div class="pdf-sec">
+    <div class="ps">
       <h3>🚨 Section 4 — Accident Cases</h3>
-      <table class="ptbl" style="margin-bottom:7px"><thead><tr><th>Accidents in CCTNS</th><th>Accidents in e-DAR</th><th>Districts NOT in e-DAR</th></tr></thead>
+      <table class="pt" style="margin-bottom:6px"><thead><tr><th>Accidents in CCTNS</th><th>Accidents in e-DAR</th><th>Districts NOT in e-DAR</th></tr></thead>
       <tbody><tr>
-        <td style="font-weight:700;text-align:center;font-size:14px" id="pdf-cctns">—</td>
-        <td style="font-weight:700;text-align:center;font-size:14px" id="pdf-edar">—</td>
-        <td id="pdf-missing">—</td>
+        <td style="font-weight:700;text-align:center;font-size:13px" id="p-cc">—</td>
+        <td style="font-weight:700;text-align:center;font-size:13px" id="p-ed">—</td>
+        <td id="p-ms">—</td>
       </tr></tbody></table>
-      <table class="ptbl"><thead><tr><th>Sr.No.</th><th>FIR &amp; Date</th><th>PS Name</th><th>Brief Facts</th></tr></thead>
-      <tbody id="pdf-fatal"><tr><td colspan="4" style="text-align:center;color:var(--muted)">NIL — No fatal cases in last 24 hours</td></tr></tbody></table>
+      <table class="pt"><thead><tr><th>Sr.No.</th><th>FIR &amp; Date</th><th>PS Name</th><th>Brief Facts</th></tr></thead>
+      <tbody id="p-fat"><tr><td colspan="4" style="text-align:center;color:var(--muted)">NIL — No fatal cases in last 24 hours</td></tr></tbody></table>
     </div>
-    <div class="pdf-foot">
+    <div class="pf">
       <div><strong>HP Police — Traffic, Tourist &amp; Railways Wing</strong><br>DSI Consolidated Report &nbsp;|&nbsp; For Official Use Only</div>
-      <div><div class="sig-line">DSP/SP Traffic (PHQ)</div></div>
+      <div><div class="si">DSP/SP Traffic (PHQ)</div></div>
     </div>
   </div>
 </main>
 </div>
 
-<!-- ══ ADMIN PAGE ══ -->
-<div id="page-admin" class="page">
+<!-- ══ ADMIN ══ -->
+<div id="pg-admin" class="pg">
 <main>
-  <div class="sec-title">Admin Panel</div>
-  <div class="sec-sub">Google Sheet link aur district wise info.</div>
+  <div class="st2">Admin Panel</div>
+  <div class="ss2">Google Sheet aur WhatsApp message.</div>
   <div class="card">
-    <div class="ctitle"><span>📊</span> Google Sheet — Direct Link</div>
-    <div class="notice">⚠️ Yeh link sirf aap (HQ) ke paas hona chahiye. Isme sabka data directly dikhta hai.</div>
-    <a href="https://docs.google.com/spreadsheets/d/1CiQcFdxVIM9h_nSqf2GbZ9JXXItVd7m7JsOinrx2aZc" target="_blank" class="btn btn-gold" style="text-decoration:none;display:inline-flex">
-      📊 Google Sheet Kholo
-    </a>
+    <div class="ct"><span>📊</span> Google Sheet — Direct Access</div>
+    <div class="ntc">⚠️ Yeh link sirf aapke paas (HQ) hona chahiye. Isme sabka data directly dikhta hai.</div>
+    <a href="https://docs.google.com/spreadsheets/d/1CiQcFdxVIM9h_nSqf2GbZ9JXXItVd7m7JsOinrx2aZc" target="_blank" class="btn bg2" style="text-decoration:none;display:inline-flex">📊 Google Sheet Kholo</a>
   </div>
   <div class="card">
-    <div class="ctitle"><span>📱</span> District Officers ko WhatsApp Message</div>
-    <div style="background:#f7f9fb;border:1px solid var(--border);border-radius:5px;padding:12px 14px;font-size:12.5px;line-height:1.9;color:var(--text)">
+    <div class="ct"><span>📱</span> District Officers ko WhatsApp Message</div>
+    <div style="background:#f7f9fb;border:1px solid var(--border);border-radius:5px;padding:11px 13px;font-size:12px;line-height:1.9" id="wa-msg">
       🚦 *HP Police DSI Portal*<br>
-      Website link: <strong>https://7-cyber.github.io</strong><br><br>
-      📋 Yahan apna district select karke daily DSI report fill karein.<br>
+      Website: <strong>https://7-cyber.github.io</strong><br><br>
+      📋 Apna district select karke daily DSI report fill karein.<br>
       Data directly HQ ko jaata hai.<br><br>
-      ⏰ Har roz report submit karni zaroori hai.<br><br>
+      ⏰ Har roz report submit karni zaroori hai.<br>
       _Traffic, Tourist &amp; Railways Wing, HP Police_
     </div>
-    <div class="btn-actions">
-      <button class="btn btn-green" onclick="copyMsg()">📋 Copy Message</button>
-    </div>
-  </div>
-  <div class="card red">
-    <div class="ctitle"><span>⚠️</span> Important Note</div>
-    <div style="font-size:12.5px;line-height:1.8">
-      • Koi bhi is website pe jaake <strong>apna district select</strong> kar sakta hai<br>
-      • Data sirf Google Sheet mein jaata hai — wahan se aap verify kar sakte ho<br>
-      • Agar koi galat district ka data bhare toh Sheet mein jaake delete kar sakte ho<br>
-      • HQ Dashboard mein date filter karke kisi bhi din ka data dekh sakte ho
-    </div>
+    <div class="ba"><button class="btn bgn" onclick="copyMsg()">📋 Copy Message</button></div>
   </div>
 </main>
 </div>
 
-<footer style="background:var(--navy);color:rgba(255,255,255,.4);text-align:center;font-size:11px;padding:12px;">
+<footer style="background:var(--navy);color:rgba(255,255,255,.4);text-align:center;font-size:11px;padding:11px;">
   <strong style="color:var(--gold)">HP Police — DSI Portal &nbsp;|&nbsp; Traffic, Tourist &amp; Railways Wing</strong><br>
   © 2026 Himachal Pradesh Police &nbsp;|&nbsp; For Official Use Only
 </footer>
 
 <script>
+// ── CONFIG — Apps Script URL ──
 const API = 'https://script.google.com/macros/s/AKfycbxxHL3e61i4OySp1xF6-oP6NMAlW5h4qeD3bSZGmnekZRodk7nLM0S5DDsi9MVFIAtr/exec';
 
-const MOTO_DB = {
-  'Baddi (BBN)':[{reg:'HP63C-7692',ps:'Traffic Wing Baddi'},{reg:'HP63C-7723',ps:'Traffic Wing Nalagarh'}],
-  'Bilaspur':[{reg:'HP63C-7693',ps:'PS Sadar'}],
-  'Chamba':[{reg:'HP63C-7705',ps:'Traffic Wing Chamba'}],
-  'Dehra':[{reg:'HP63C-7699',ps:'PS Dehra'},{reg:'HP63C-7701',ps:'PS Jawalamukhi'}],
-  'Hamirpur':[{reg:'HP63C-7704',ps:'Traffic Wing Hamirpur'},{reg:'HP63C-7708',ps:'PS Nadaun'},{reg:'HP63C-7709',ps:'PS Hamirpur'}],
-  'Kangra':[{reg:'HP63C-7703',ps:'PS Kangra'},{reg:'HP63C-7706',ps:'PS Dharamshala'},{reg:'HP63C-7715',ps:'PS Nagrota'},{reg:'HP63C-7725',ps:'PS Bhawarna'},{reg:'HP63C-7727',ps:'PS Palampur'}],
-  'Kinnaur':[],'Kullu':[{reg:'HP63C-7694',ps:'Traffic Wing Manali'},{reg:'HP63C-7695',ps:'Traffic Wing Kullu'}],
+// ── MOTORCYCLE DATA ──
+const BIKES = {
+  'Baddi (BBN)':[{r:'HP63C-7692',p:'Traffic Wing Baddi'},{r:'HP63C-7723',p:'Traffic Wing Nalagarh'}],
+  'Bilaspur':[{r:'HP63C-7693',p:'PS Sadar'}],
+  'Chamba':[{r:'HP63C-7705',p:'Traffic Wing Chamba'}],
+  'Dehra':[{r:'HP63C-7699',p:'PS Dehra'},{r:'HP63C-7701',p:'PS Jawalamukhi'}],
+  'Hamirpur':[{r:'HP63C-7704',p:'Traffic Wing Hamirpur'},{r:'HP63C-7708',p:'PS Nadaun'},{r:'HP63C-7709',p:'PS Hamirpur'}],
+  'Kangra':[{r:'HP63C-7703',p:'PS Kangra'},{r:'HP63C-7706',p:'PS Dharamshala'},{r:'HP63C-7715',p:'PS Nagrota'},{r:'HP63C-7725',p:'PS Bhawarna'},{r:'HP63C-7727',p:'PS Palampur'}],
+  'Kinnaur':[],'Kullu':[{r:'HP63C-7694',p:'Traffic Wing Manali'},{r:'HP63C-7695',p:'Traffic Wing Kullu'}],
   'Lahaul & Spiti':[],
-  'Mandi':[{reg:'HP63C-7696',ps:'PS Sundernagar'},{reg:'HP63C-7712',ps:'PS Balh'},{reg:'HP63C-7716',ps:'PS Aut'},{reg:'HP63C-7719',ps:'PS Sadar Mandi'},{reg:'HP63C-7720',ps:'PS Paddar'}],
-  'Nurpur':[{reg:'HP63C-6177',ps:'Kandwal to Nurpur'},{reg:'HP63C-6178',ps:'Rahan to Raja ka Talab'},{reg:'HP63C-6180',ps:'PS Damtal'},{reg:'HP63C-6190',ps:'Talara to Baroh'},{reg:'HP63C-6194',ps:'Nurpur to BhedKhad'},{reg:'HP63C-6202',ps:'Fatehpur to Dhameta'}],
-  'Shimla':[{reg:'HP63C-6172',ps:'PP Baghi'},{reg:'HP63C-6176',ps:'PP Junga'},{reg:'HP63C-6179',ps:'PS Rampur'},{reg:'HP63C-6181',ps:'Traffic Wing Shimla'},{reg:'HP63C-6184',ps:'PP Tikkar'},{reg:'HP63C-6185',ps:'PP Taklech'},{reg:'HP63C-6186',ps:'PS Sanjauli'},{reg:'HP63C-6187',ps:'Traffic Wing Shimla'},{reg:'HP63C-6188',ps:'PP Chhaila'},{reg:'HP63C-6189',ps:'Traffic Wing Shimla'},{reg:'HP63C-6191',ps:'Traffic Wing Shimla'},{reg:'HP63C-6192',ps:'Traffic Wing Shimla'},{reg:'HP63C-6193',ps:'Traffic Wing Shimla'},{reg:'HP63C-6195',ps:'PP Dhami'},{reg:'HP63C-6196',ps:'Traffic Wing/PL Kaithu'},{reg:'HP63C-6197',ps:'Traffic Wing Shimla'},{reg:'HP63C-6198',ps:'Traffic Wing Shimla'},{reg:'HP63C-6199',ps:'Traffic Wing Shimla'}],
-  'Sirmour':[{reg:'HP63C-7698',ps:'Traffic Wing Nahan'},{reg:'HP63C-7718',ps:'Traffic Wing Paonta Sahib'}],
+  'Mandi':[{r:'HP63C-7696',p:'PS Sundernagar'},{r:'HP63C-7712',p:'PS Balh'},{r:'HP63C-7716',p:'PS Aut'},{r:'HP63C-7719',p:'PS Sadar Mandi'},{r:'HP63C-7720',p:'PS Paddar'}],
+  'Nurpur':[{r:'HP63C-6177',p:'Kandwal to Nurpur'},{r:'HP63C-6178',p:'Rahan to Raja ka Talab'},{r:'HP63C-6180',p:'PS Damtal'},{r:'HP63C-6190',p:'Talara to Baroh'},{r:'HP63C-6194',p:'Nurpur to BhedKhad'},{r:'HP63C-6202',p:'Fatehpur to Dhameta'}],
+  'Shimla':[{r:'HP63C-6172',p:'PP Baghi'},{r:'HP63C-6176',p:'PP Junga'},{r:'HP63C-6179',p:'PS Rampur'},{r:'HP63C-6181',p:'Traffic Wing Shimla'},{r:'HP63C-6184',p:'PP Tikkar'},{r:'HP63C-6185',p:'PP Taklech'},{r:'HP63C-6186',p:'PS Sanjauli'},{r:'HP63C-6187',p:'Traffic Wing Shimla'},{r:'HP63C-6188',p:'PP Chhaila'},{r:'HP63C-6189',p:'Traffic Wing Shimla'},{r:'HP63C-6191',p:'Traffic Wing Shimla'},{r:'HP63C-6192',p:'Traffic Wing Shimla'},{r:'HP63C-6193',p:'Traffic Wing Shimla'},{r:'HP63C-6195',p:'PP Dhami'},{r:'HP63C-6196',p:'Traffic Wing/PL Kaithu'},{r:'HP63C-6197',p:'Traffic Wing Shimla'},{r:'HP63C-6198',p:'Traffic Wing Shimla'},{r:'HP63C-6199',p:'Traffic Wing Shimla'}],
+  'Sirmour':[{r:'HP63C-7698',p:'Traffic Wing Nahan'},{r:'HP63C-7718',p:'Traffic Wing Paonta Sahib'}],
   'Solan':[],
-  'Una':[{reg:'HP63C-7702',ps:'Traffic Wing Una'},{reg:'HP63C-7713',ps:'PS Haroli'},{reg:'HP63C-7714',ps:'Highway Patrol'},{reg:'HP63C-7726',ps:'PS Chintpurni'}]
+  'Una':[{r:'HP63C-7702',p:'Traffic Wing Una'},{r:'HP63C-7713',p:'PS Haroli'},{r:'HP63C-7714',p:'Highway Patrol'},{r:'HP63C-7726',p:'PS Chintpurni'}]
 };
 
-const ALL_DIST=['Baddi (BBN)','Bilaspur','Chamba','Dehra','Hamirpur','Kangra','Kinnaur','Kullu','Lahaul & Spiti','Mandi','Nurpur','Shimla','Sirmour','Solan','Una'];
-let dashData={rows:[],detail:{}};
+const ALL=['Baddi (BBN)','Bilaspur','Chamba','Dehra','Hamirpur','Kangra','Kinnaur','Kullu','Lahaul & Spiti','Mandi','Nurpur','Shimla','Sirmour','Solan','Una'];
+let HD={summary:[],moto:[],vol:[],itms:[],fatal:[]};
 
 // Clock
-function updateClock(){document.getElementById('clock').textContent=new Date().toLocaleString('en-IN',{weekday:'short',day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit',second:'2-digit'});}
-updateClock();setInterval(updateClock,1000);
-document.getElementById('d-date').value=new Date().toISOString().split('T')[0];
-document.getElementById('hq-date').value=new Date().toISOString().split('T')[0];
+setInterval(()=>{ document.getElementById('clk').textContent=new Date().toLocaleString('en-IN',{weekday:'short',day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit',second:'2-digit'}); },1000);
+
+// Init dates
+document.getElementById('f-date').value=new Date().toISOString().split('T')[0];
+document.getElementById('hq-dt').value=new Date().toISOString().split('T')[0];
 
 // Nav
 function go(p){
-  document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));
-  document.getElementById('page-'+p).classList.add('active');
-  document.querySelectorAll('.nav-tabs button').forEach((b,i)=>{b.classList.remove('active');});
-  const idx={form:0,hq:1,pdf:2,admin:3};
-  if(idx[p]!==undefined) document.querySelectorAll('.nav-tabs button')[idx[p]].classList.add('active');
+  document.querySelectorAll('.pg').forEach(x=>x.classList.remove('on'));
+  document.getElementById('pg-'+p).classList.add('on');
+  document.querySelectorAll('nav button').forEach(b=>b.classList.remove('on'));
+  const i={form:0,hq:1,pdf:2,admin:3}[p];
+  if(i!==undefined) document.querySelectorAll('nav button')[i].classList.add('on');
   window.scrollTo({top:0,behavior:'smooth'});
 }
 
-// District change
-function onDistrictChange(){
-  const dist=document.getElementById('d-dist').value;
-  if(dist) loadMotorcycles(dist);
-}
-
-// Load motorcycles
-function loadMotorcycles(dist){
-  const tb=document.getElementById('moto-tb');
-  const info=document.getElementById('moto-info');
+// Load bikes when district selected
+function loadBikes(){
+  const dist=document.getElementById('f-dist').value;
+  const tb=document.getElementById('bike-tb');
+  const info=document.getElementById('bike-info');
   tb.innerHTML='';
-  const bikes=MOTO_DB[dist]||[];
-  if(!bikes.length){
-    info.style.display='block';
-    info.textContent=dist+' ke liye koi motorcycle assigned nahi hai is record mein.';
-    return;
-  }
+  if(!dist){info.style.display='block';info.textContent='ℹ️ Pehle district select karo.';return;}
+  const list=BIKES[dist]||[];
+  if(!list.length){info.style.display='block';info.textContent=dist+' ke liye koi motorcycle record nahi hai.';return;}
   info.style.display='none';
-  bikes.forEach((b,i)=>{
+  list.forEach((b,i)=>{
     const tr=document.createElement('tr');
     tr.style.background='#f8fbff';
-    tr.innerHTML=`
-      <td style="color:var(--muted);font-size:11px">${i+1}</td>
-      <td><input type="text" value="${b.reg}" readonly style="width:130px;font-size:12px;padding:4px 7px;border:1px solid var(--border);border-radius:4px;background:#f0f4f8;color:var(--navy);font-weight:600"></td>
-      <td><input type="text" value="${b.ps}" readonly style="width:100%;font-size:12px;padding:4px 7px;border:1px solid var(--border);border-radius:4px;background:#f0f4f8;color:var(--navy);font-weight:600"></td>
-      <td><input type="number" id="km-${i}" min="0" placeholder="0" style="width:75px;font-size:13px;padding:5px 7px;border:1.5px solid var(--accent);border-radius:4px;font-weight:600"></td>
-      <td><input type="number" id="ch-${i}" min="0" placeholder="0" style="width:75px;font-size:13px;padding:5px 7px;border:1.5px solid var(--accent);border-radius:4px;font-weight:600"></td>`;
+    tr.innerHTML=`<td style="color:var(--muted);font-size:11px">${i+1}</td>
+      <td><input type="text" value="${b.r}" readonly style="width:125px;font-size:11.5px;padding:4px 6px;border:1px solid var(--border);border-radius:4px;background:#f0f4f8;color:var(--navy);font-weight:600"></td>
+      <td><input type="text" value="${b.p}" readonly style="width:100%;font-size:11.5px;padding:4px 6px;border:1px solid var(--border);border-radius:4px;background:#f0f4f8;color:var(--navy);font-weight:600"></td>
+      <td><input type="number" id="km${i}" min="0" placeholder="0" style="width:70px;font-size:12.5px;padding:5px 6px;border:1.5px solid var(--accent);border-radius:4px;font-weight:600"></td>
+      <td><input type="number" id="ch${i}" min="0" placeholder="0" style="width:70px;font-size:12.5px;padding:5px 6px;border:1.5px solid var(--accent);border-radius:4px;font-weight:600"></td>`;
     tb.appendChild(tr);
   });
 }
 
-function collectMoto(){
-  const dist=document.getElementById('d-dist').value;
-  const bikes=MOTO_DB[dist]||[];
-  return bikes.map((b,i)=>({reg:b.reg,ps:b.ps,km:document.getElementById('km-'+i)?.value||'0',ch:document.getElementById('ch-'+i)?.value||'0'}));
+function getBikes(){
+  const dist=document.getElementById('f-dist').value;
+  return (BIKES[dist]||[]).map((b,i)=>({reg:b.r,ps:b.p,km:document.getElementById('km'+i)?.value||'0',ch:document.getElementById('ch'+i)?.value||'0'}));
 }
 
 // Dynamic rows
-let rn={itms:0,vol:0,fatal:0};
+let rn={itms:0,vol:0,fat:0};
 function addR(t){
-  const n=++rn[t];
-  const tb=document.getElementById(t+'-tb');
-  const tr=document.createElement('tr');
-  let h=`<td style="color:var(--muted);font-size:11px">${n}</td>`;
-  const inp=(id,w,ph,type)=>`<td><input type="${type||'text'}" id="${id}" style="width:${w};font-size:11.5px;padding:4px 7px;border:1px solid var(--border);border-radius:4px" placeholder="${ph}"></td>`;
-  const ta=(id,ph)=>`<td><textarea id="${id}" rows="2" style="width:100%;min-width:150px;font-size:11.5px;padding:4px 7px;border:1px solid var(--border);border-radius:4px" placeholder="${ph}"></textarea></td>`;
-  if(t==='itms') h+=inp(`il-${n}`,'100%','ITMS Location')+inp(`ir-${n}`,'100%','Reason');
-  else if(t==='vol') h+=inp(`vn-${n}`,'65px','0','number')+inp(`vp-${n}`,'100%','Place')+`<td><input type="text" id="vd-${n}" value="Traffic Duty" style="width:100%;font-size:11.5px;padding:4px 7px;border:1px solid var(--border);border-radius:4px"></td>`;
-  else if(t==='fatal') h+=inp(`ff-${n}`,'100%','FIR No. & Date')+inp(`fps-${n}`,'100%','PS Name')+ta(`fb-${n}`,'Brief Facts');
-  h+=`<td><button class="del-row" onclick="this.closest('tr').remove()">✕</button></td>`;
+  const n=++rn[t]; const tb=document.getElementById(t+'-tb');
+  const tr=document.createElement('tr'); let h=`<td style="color:var(--muted);font-size:11px">${n}</td>`;
+  const inp=(id,w,ph,tp)=>`<td><input type="${tp||'text'}" id="${id}" style="width:${w};font-size:11.5px;padding:4px 7px;border:1px solid var(--border);border-radius:4px" placeholder="${ph}"></td>`;
+  const ta=(id,ph)=>`<td><textarea id="${id}" rows="2" style="width:100%;min-width:140px;font-size:11.5px;padding:4px 7px;border:1px solid var(--border);border-radius:4px" placeholder="${ph}"></textarea></td>`;
+  if(t==='itms') h+=inp(`il${n}`,'100%','ITMS Location')+inp(`ir${n}`,'100%','Reason');
+  else if(t==='vol') h+=inp(`vn${n}`,'60px','0','number')+inp(`vp${n}`,'100%','Place')+`<td><input type="text" id="vd${n}" value="Traffic Duty" style="width:100%;font-size:11.5px;padding:4px 7px;border:1px solid var(--border);border-radius:4px"></td>`;
+  else if(t==='fat') h+=inp(`ff${n}`,'100%','FIR No. & Date')+inp(`fps${n}`,'100%','PS Name')+ta(`fb${n}`,'Brief Facts');
+  h+=`<td><button class="dr" onclick="this.closest('tr').remove()">✕</button></td>`;
   tr.innerHTML=h; tb.appendChild(tr);
 }
 
 function getRows(t){
   const rows=[];
   document.getElementById(t+'-tb').querySelectorAll('tr').forEach(tr=>{
-    if(t==='itms'){const l=tr.querySelector('[id^="il-"]'),r=tr.querySelector('[id^="ir-"]');if(l&&l.value)rows.push({loc:l.value,rsn:r?r.value:''});}
-    else if(t==='vol'){const n=tr.querySelector('[id^="vn-"]'),p=tr.querySelector('[id^="vp-"]'),d=tr.querySelector('[id^="vd-"]');if(p&&p.value)rows.push({n:n?n.value:'0',p:p.value,d:d?d.value:'Traffic Duty'});}
-    else if(t==='fatal'){const f=tr.querySelector('[id^="ff-"]'),ps=tr.querySelector('[id^="fps-"]'),b=tr.querySelector('[id^="fb-"]');if(f&&f.value)rows.push({fir:f.value,ps:ps?ps.value:'',facts:b?b.value:''});}
+    if(t==='itms'){const l=tr.querySelector('[id^="il"]'),r=tr.querySelector('[id^="ir"]');if(l&&l.value)rows.push({loc:l.value,rsn:r?r.value:''});}
+    else if(t==='vol'){const n=tr.querySelector('[id^="vn"]'),p=tr.querySelector('[id^="vp"]'),d=tr.querySelector('[id^="vd"]');if(p&&p.value)rows.push({n:n?n.value:'0',p:p.value,d:d?d.value:'Traffic Duty'});}
+    else if(t==='fat'){const f=tr.querySelector('[id^="ff"]'),ps=tr.querySelector('[id^="fps"]'),b=tr.querySelector('[id^="fb"]');if(f&&f.value)rows.push({fir:f.value,ps:ps?ps.value:'',facts:b?b.value:''});}
   }); return rows;
 }
 
 // Submit
-async function submitDSI(){
-  const date=document.getElementById('d-date').value;
-  const dist=document.getElementById('d-dist').value;
-  const officer=document.getElementById('d-officer').value.trim();
-  const rank=document.getElementById('d-rank').value;
-  const decl=document.getElementById('d-decl').checked;
-  if(!date||!dist||!officer||!rank){alert('Date, District, Officer Name aur Rank zaruri hai.');return;}
-  if(!decl){alert('Declaration accept karo pehle.');return;}
-
-  const btn=document.getElementById('submit-btn');
-  const msgEl=document.getElementById('submit-msg');
-  btn.innerHTML='<span class="loading"></span> Submit ho raha hai...';
-  btn.disabled=true; msgEl.style.display='none';
-
-  const payload={
-    action:'submitDSI',
-    username:'district_user',
-    date, district:dist, officer, rank,
-    badge:document.getElementById('d-badge').value||'',
-    shift:document.getElementById('d-shift').value,
-    vin:Number(document.getElementById('d-vin').value)||0,
-    vout:Number(document.getElementById('d-vout').value)||0,
-    cctns:Number(document.getElementById('d-cctns').value)||0,
-    edar:Number(document.getElementById('d-edar').value)||0,
-    missing:document.getElementById('d-missing').value||'',
-    moto:collectMoto(),
-    itms:getRows('itms'),
-    vol:getRows('vol'),
-    fatal:getRows('fatal')
-  };
-
+async function submitForm(){
+  const date=document.getElementById('f-date').value;
+  const dist=document.getElementById('f-dist').value;
+  const off=document.getElementById('f-off').value.trim();
+  const rank=document.getElementById('f-rank').value;
+  const decl=document.getElementById('f-decl').checked;
+  if(!date||!dist||!off||!rank){alert('Date, District, Officer Name aur Rank zaruri hai.');return;}
+  if(!decl){alert('Pehle declaration accept karo.');return;}
+  const btn=document.getElementById('sub-btn');
+  const msg=document.getElementById('sub-msg');
+  btn.innerHTML='<span class="ld"></span>Submit ho raha hai...'; btn.disabled=true; msg.style.display='none';
   try{
-    const res=await fetch(API,{method:'POST',body:JSON.stringify(payload)});
-    const data=await res.json();
-    msgEl.style.display='block';
-    if(data.success){
-      msgEl.className='alert-s';
-      msgEl.innerHTML='✅ <strong>'+dist+'</strong> ka data HQ Google Sheet mein save ho gaya!';
-    } else {
-      msgEl.className='alert-e';
-      msgEl.textContent='❌ Error: '+(data.msg||'Unknown error');
-    }
-  }catch(e){
-    msgEl.style.display='block';
-    msgEl.className='alert-e';
-    msgEl.textContent='❌ Submit nahi hua. Dobara try karo.';
-  }
-  btn.innerHTML='📤 Google Sheet mein Submit Karo';
-  btn.disabled=false;
+    const payload={action:'submit',date,district:dist,officer:off,rank,badge:document.getElementById('f-badge').value||'',shift:document.getElementById('f-shift').value,vin:+document.getElementById('f-vin').value||0,vout:+document.getElementById('f-vout').value||0,cctns:+document.getElementById('f-cctns').value||0,edar:+document.getElementById('f-edar').value||0,missing:document.getElementById('f-miss').value||'',moto:getBikes(),itms:getRows('itms'),vol:getRows('vol'),fatal:getRows('fat')};
+    const res=await fetch(API,{method:'POST',mode:'cors',body:JSON.stringify(payload)});
+    const d=await res.json();
+    msg.style.display='block';
+    if(d.ok){msg.className='as';msg.innerHTML='✅ <strong>'+dist+'</strong> ka data Google Sheet mein save ho gaya!';}
+    else{msg.className='ae';msg.textContent='❌ Error: '+(d.msg||'Unknown');}
+  }catch(e){msg.style.display='block';msg.className='ae';msg.textContent='❌ Submit nahi hua. Internet check karo aur dobara try karo.';}
+  btn.innerHTML='📤 Google Sheet mein Submit'; btn.disabled=false;
 }
 
-// Load HQ Dashboard
+// Load HQ
 async function loadHQ(){
-  const date=document.getElementById('hq-date').value;
-  const loader=document.getElementById('hq-loader');
-  const content=document.getElementById('hq-content');
-  loader.style.display='block';
-  loader.innerHTML='<span class="loading" style="border-top-color:var(--blue);border-color:rgba(26,58,107,.2)"></span> Google Sheet se data load ho raha hai...';
-  content.style.display='none';
+  const date=document.getElementById('hq-dt').value;
+  const ld=document.getElementById('hq-load'); const con=document.getElementById('hq-con');
+  ld.style.display='block'; ld.innerHTML='<span class="ld" style="border-top-color:var(--blue);border-color:rgba(26,58,107,.2)"></span> Google Sheet se data load ho raha hai...'; con.style.display='none';
   try{
-    const res=await fetch(API,{method:'POST',body:JSON.stringify({action:'getDashboard',username:'admin',date:date||''})});
-    const data=await res.json();
-    if(data.success){
-      dashData=data;
-      renderHQ(data);
-      loader.style.display='none';
-      content.style.display='block';
-    } else {
-      loader.innerHTML='❌ '+data.msg;
-    }
-  }catch(e){
-    loader.innerHTML='❌ Load nahi hua. Internet check karo aur dobara try karo.';
-  }
+    const res=await fetch(API,{method:'POST',mode:'cors',body:JSON.stringify({action:'fetch',date})});
+    const d=await res.json();
+    if(d.ok){HD=d;renderHQ(d);ld.style.display='none';con.style.display='block';}
+    else{ld.innerHTML='❌ '+d.msg;}
+  }catch(e){ld.innerHTML='❌ Load nahi hua. Internet check karo aur dobara try karo.';}
 }
 
-function renderHQ(res){
-  const rows=res.rows||[];
-  const submitted=rows.map(r=>r.District);
+function renderHQ(d){
+  const rows=d.summary||[];
+  const subs=rows.map(r=>r.District);
   // District grid
-  const dg=document.getElementById('dist-grid'); dg.innerHTML='';
-  ALL_DIST.forEach(d=>{
-    const s=rows.find(r=>r.District===d);
-    const div=document.createElement('div');
-    div.className='dist-card '+(s?'submitted':'pending');
-    div.innerHTML=`<div class="dist-name">${d}</div><div style="margin-top:3px">${s?'<span class="badge b-green">✅ Done</span>':'<span class="badge b-yellow">⏳ Pending</span>'}</div>${s?`<div style="font-size:10px;color:var(--muted);margin-top:2px">${s.Officer||''}</div>`:''}`;
+  const dg=document.getElementById('dg'); dg.innerHTML='';
+  ALL.forEach(x=>{
+    const s=rows.find(r=>r.District===x);
+    const div=document.createElement('div'); div.className='dc '+(s?'sub':'pen');
+    div.innerHTML=`<div class="dn">${x}</div><div style="margin-top:3px">${s?'<span class="bx bxg">✅ Done</span>':'<span class="bx bxy">⏳ Pending</span>'}</div>${s?`<div style="font-size:10px;color:var(--muted);margin-top:2px">${s.Officer||''}</div>`:''}`;
     dg.appendChild(div);
   });
   // Table
-  const tbody=document.getElementById('hq-body'); tbody.innerHTML='';
+  const tb=document.getElementById('hq-tb'); tb.innerHTML='';
   let tv=0,tv2=0,tm=0,tk=0,tc=0,tvol=0,ti=0,ta=0,te=0,tf=0;
-  ALL_DIST.forEach(d=>{
-    const s=rows.find(r=>r.District===d);
+  ALL.forEach(x=>{
+    const s=rows.find(r=>r.District===x);
     const tr=document.createElement('tr');
     if(s){
-      const v1=Number(s.Veh_In||0),v2=Number(s.Veh_Out||0),mo=Number(s.Total_Motos||0),km=Number(s.Total_KMs||0),ch=Number(s.Total_Challans||0),vo=Number(s.Total_Volunteers||0),it=Number(s.Total_ITMS||0),ac=Number(s.CCTNS_Accidents||0),ed=Number(s.eDAR_Accidents||0),fa=Number(s.Total_Fatal||0);
+      const v1=+s.Veh_In||0,v2=+s.Veh_Out||0,mo=+s.Motos||0,km=+s.KMs||0,ch=+s.Challans||0,vo=+s.Volunteers||0,it=+s.ITMS||0,ac=+s.CCTNS||0,ed=+s.eDAR||0,fa=+s.Fatal||0;
       tv+=v1;tv2+=v2;tm+=mo;tk+=km;tc+=ch;tvol+=vo;ti+=it;ta+=ac;te+=ed;tf+=fa;
-      tr.innerHTML=`<td><strong>${d}</strong></td><td>${s.Officer||''}<br><span style="font-size:9.5px;color:var(--muted)">${s.Rank||''}</span></td>
-        <td style="text-align:center">${v1}</td><td style="text-align:center">${v2}</td><td style="text-align:center">${mo}</td><td style="text-align:center">${km}</td><td style="text-align:center">${ch}</td>
-        <td style="text-align:center">${vo}</td>
-        <td style="text-align:center">${it?`<span class="badge b-red">${it}</span>`:'<span class="badge b-green">NIL</span>'}</td>
-        <td style="text-align:center">${ac}</td><td style="text-align:center">${ed}</td>
-        <td style="text-align:center">${fa?`<span class="badge b-red">${fa}</span>`:'<span class="badge b-grey">NIL</span>'}`;
-    } else {
-      tr.innerHTML=`<td><strong>${d}</strong></td><td colspan="10" style="color:var(--muted);font-style:italic">— Not submitted yet —</td><td><span class="badge b-yellow">⏳</span></td>`;
-    }
-    tbody.appendChild(tr);
+      tr.innerHTML=`<td><strong>${x}</strong></td><td>${s.Officer||''}<br><span style="font-size:9.5px;color:var(--muted)">${s.Rank||''}</span></td><td style="text-align:center">${v1}</td><td style="text-align:center">${v2}</td><td style="text-align:center">${mo}</td><td style="text-align:center">${km}</td><td style="text-align:center">${ch}</td><td style="text-align:center">${vo}</td><td style="text-align:center">${it?`<span class="bx bxr">${it}</span>`:'<span class="bx bxg">NIL</span>'}</td><td style="text-align:center">${ac}</td><td style="text-align:center">${ed}</td><td style="text-align:center">${fa?`<span class="bx bxr">${fa}</span>`:'<span class="bx bxgr">NIL</span>'}`;
+    }else{tr.innerHTML=`<td><strong>${x}</strong></td><td colspan="10" style="color:var(--muted);font-style:italic">— Not submitted yet —</td><td><span class="bx bxy">⏳</span></td>`;}
+    tb.appendChild(tr);
   });
-  ['t-vin','t-vout','t-moto','t-km','t-ch','t-vol','t-itms','t-acc','t-edar','t-fat'].forEach((id,i)=>{
-    document.getElementById(id).textContent=[tv,tv2,tm,tk,tc,tvol,ti,ta,te,tf][i];
-  });
-  document.getElementById('s-sub').textContent=submitted.length;
-  document.getElementById('s-pend').textContent=15-submitted.length;
-  document.getElementById('s-veh').textContent=tv+tv2;
-  document.getElementById('s-acc').textContent=ta;
-  document.getElementById('s-fat').textContent=tf;
-  document.getElementById('s-ch').textContent=tc;
-  document.getElementById('s-vol').textContent=tvol;
-  document.getElementById('s-itms').textContent=ti;
+  ['t-vi','t-vo','t-mo','t-km','t-ch','t-vl','t-it','t-ac','t-ed','t-fa'].forEach((id,i)=>{ document.getElementById(id).textContent=[tv,tv2,tm,tk,tc,tvol,ti,ta,te,tf][i]; });
+  document.getElementById('ss-sub').textContent=subs.length;
+  document.getElementById('ss-pen').textContent=15-subs.length;
+  document.getElementById('ss-veh').textContent=tv+tv2;
+  document.getElementById('ss-acc').textContent=ta;
+  document.getElementById('ss-fat').textContent=tf;
+  document.getElementById('ss-ch').textContent=tc;
+  document.getElementById('ss-vol').textContent=tvol;
+  document.getElementById('ss-itms').textContent=ti;
   // Fatal
-  const fl=res.detail?.fatal||[];
-  document.getElementById('hq-fatal').innerHTML=fl.length?fl.map((f,i)=>`<tr><td>${i+1}</td><td><strong>${f.District}</strong></td><td>${f.FIR_No_Date}</td><td>${f.PS_Name}</td><td>${f.Brief_Facts}</td></tr>`).join(''):`<tr><td colspan="5" style="text-align:center;color:var(--muted);padding:12px">No fatal cases.</td></tr>`;
+  const fl=d.fatal||[];
+  document.getElementById('hq-fat').innerHTML=fl.length?fl.map((f,i)=>`<tr><td>${i+1}</td><td><strong>${f.District}</strong></td><td>${f.FIR}</td><td>${f.PS}</td><td>${f.Facts}</td></tr>`).join(''):`<tr><td colspan="5" style="text-align:center;color:var(--muted);padding:11px">No fatal cases.</td></tr>`;
   // ITMS
-  const il=res.detail?.itms||[];
-  document.getElementById('hq-itms').innerHTML=il.length?il.map((it,i)=>`<tr><td>${i+1}</td><td><strong>${it.District}</strong></td><td>${it.ITMS_Location}</td><td>${it.Reason}</td></tr>`).join(''):`<tr><td colspan="4" style="text-align:center;color:var(--muted);padding:12px">No ITMS issues.</td></tr>`;
+  const il=d.itms||[];
+  document.getElementById('hq-itms').innerHTML=il.length?il.map((it,i)=>`<tr><td>${i+1}</td><td><strong>${it.District}</strong></td><td>${it.Location}</td><td>${it.Reason}</td></tr>`).join(''):`<tr><td colspan="4" style="text-align:center;color:var(--muted);padding:11px">No ITMS issues.</td></tr>`;
 }
 
 // Build PDF
-function buildPDF(){
-  const rows=dashData.rows||[];
-  const date=document.getElementById('hq-date').value||new Date().toISOString().split('T')[0];
+function makePDF(){
+  const rows=HD.summary||[];
+  const date=document.getElementById('hq-dt').value||new Date().toISOString().split('T')[0];
   const fmt=new Date(date).toLocaleDateString('en-IN',{day:'2-digit',month:'long',year:'numeric'});
-  document.getElementById('pdf-ref').textContent='DSI/'+date.replace(/-/g,'')+'/CONSOLIDATED';
-  document.getElementById('pdf-date2').textContent=fmt;
-  document.getElementById('pdf-gen').textContent=new Date().toLocaleString('en-IN');
+  document.getElementById('p-ref').textContent='DSI/'+date.replace(/-/g,'')+'/CONSOLIDATED';
+  document.getElementById('p-dt').textContent=fmt;
+  document.getElementById('p-gen').textContent=new Date().toLocaleString('en-IN');
   let tv=0,tv2=0,ta=0,te=0,ml=[];
-  rows.forEach(s=>{tv+=Number(s.Veh_In||0);tv2+=Number(s.Veh_Out||0);ta+=Number(s.CCTNS_Accidents||0);te+=Number(s.eDAR_Accidents||0);if(s.Missing_eDAR)ml.push(s.District+'='+s.Missing_eDAR);});
-  document.getElementById('pdf-vin').textContent=tv;
-  document.getElementById('pdf-vout').textContent=tv2;
-  document.getElementById('pdf-cctns').textContent=ta;
-  document.getElementById('pdf-edar').textContent=te;
-  document.getElementById('pdf-missing').textContent=ml.join(', ')||'NIL';
-  const il=dashData.detail?.itms||[];
-  document.getElementById('pdf-itms').innerHTML=il.length?il.map((it,i)=>`<tr><td>${i+1}</td><td>${it.District}</td><td>${it.ITMS_Location} — ${it.Reason}</td></tr>`).join('')+`<tr style="font-weight:700;background:#f4f7fb"><td colspan="2">Total</td><td>${il.length}</td></tr>`:`<tr><td colspan="3" style="text-align:center;color:var(--muted)">NIL</td></tr>`;
-  const ml2=dashData.detail?.moto||[];let tk=0,tc2=0;
-  document.getElementById('pdf-moto').innerHTML=ml2.length?ml2.map(m=>{tk+=Number(m.Patrolling_KMs||0);tc2+=Number(m.Challans||0);return`<tr><td>${m.District}</td><td>${m.Reg_No}</td><td>${m.PS_Beat}</td><td style="text-align:center">${m.Patrolling_KMs||'00'}</td><td style="text-align:center">${m.Challans||'00'}</td></tr>`;}).join('')+`<tr style="font-weight:700;background:#f4f7fb"><td colspan="3">TOTAL</td><td style="text-align:center">${tk}</td><td style="text-align:center">${tc2}</td></tr>`:`<tr><td colspan="5" style="text-align:center;color:var(--muted)">NIL</td></tr>`;
-  const vl=dashData.detail?.vol||[];let tv3=0;
-  document.getElementById('pdf-vol').innerHTML=vl.length?vl.map(v=>{tv3+=Number(v.No_Volunteers||0);return`<tr><td>${v.District}</td><td style="text-align:center">${v.No_Volunteers}</td><td>${v.Place}</td><td>${v.Duty}</td></tr>`;}).join('')+`<tr style="font-weight:700;background:#f4f7fb"><td>Total</td><td style="text-align:center">${tv3}</td><td colspan="2"></td></tr>`:`<tr><td colspan="4" style="text-align:center;color:var(--muted)">NIL</td></tr>`;
-  const fat=dashData.detail?.fatal||[];
-  document.getElementById('pdf-fatal').innerHTML=fat.length?fat.map((f,i)=>`<tr><td>${i+1}</td><td>${f.FIR_No_Date}</td><td>${f.PS_Name}</td><td>${f.Brief_Facts}</td></tr>`).join(''):`<tr><td colspan="4" style="text-align:center;color:var(--muted)">NIL — No fatal cases in last 24 hours</td></tr>`;
+  rows.forEach(s=>{tv+=+s.Veh_In||0;tv2+=+s.Veh_Out||0;ta+=+s.CCTNS||0;te+=+s.eDAR||0;if(s.Missing_eDAR)ml.push(s.District+'='+s.Missing_eDAR);});
+  document.getElementById('p-vi').textContent=tv;
+  document.getElementById('p-vo').textContent=tv2;
+  document.getElementById('p-cc').textContent=ta;
+  document.getElementById('p-ed').textContent=te;
+  document.getElementById('p-ms').textContent=ml.join(', ')||'NIL';
+  const il=HD.itms||[];
+  document.getElementById('p-itms').innerHTML=il.length?il.map((it,i)=>`<tr><td>${i+1}</td><td>${it.District}</td><td>${it.Location} — ${it.Reason}</td></tr>`).join('')+`<tr style="font-weight:700;background:#f4f7fb"><td colspan="2">Total</td><td>${il.length}</td></tr>`:`<tr><td colspan="3" style="text-align:center;color:var(--muted)">NIL</td></tr>`;
+  const ml2=HD.moto||[];let tk=0,tc2=0;
+  document.getElementById('p-moto').innerHTML=ml2.length?ml2.map(m=>{tk+=+m.KMs||0;tc2+=+m.Challans||0;return`<tr><td>${m.District}</td><td>${m.Reg_No}</td><td>${m.PS_Beat}</td><td style="text-align:center">${m.KMs||'00'}</td><td style="text-align:center">${m.Challans||'00'}</td></tr>`;}).join('')+`<tr style="font-weight:700;background:#f4f7fb"><td colspan="3">TOTAL</td><td style="text-align:center">${tk}</td><td style="text-align:center">${tc2}</td></tr>`:`<tr><td colspan="5" style="text-align:center;color:var(--muted)">NIL</td></tr>`;
+  const vl=HD.vol||[];let tv3=0;
+  document.getElementById('p-vol').innerHTML=vl.length?vl.map(v=>{tv3+=+v.Count||0;return`<tr><td>${v.District}</td><td style="text-align:center">${v.Count}</td><td>${v.Place}</td><td>${v.Duty}</td></tr>`;}).join('')+`<tr style="font-weight:700;background:#f4f7fb"><td>Total</td><td style="text-align:center">${tv3}</td><td colspan="2"></td></tr>`:`<tr><td colspan="4" style="text-align:center;color:var(--muted)">NIL</td></tr>`;
+  const fat=HD.fatal||[];
+  document.getElementById('p-fat').innerHTML=fat.length?fat.map((f,i)=>`<tr><td>${i+1}</td><td>${f.FIR}</td><td>${f.PS}</td><td>${f.Facts}</td></tr>`).join(''):`<tr><td colspan="4" style="text-align:center;color:var(--muted)">NIL — No fatal cases in last 24 hours</td></tr>`;
 }
 
 function resetForm(){
-  ['d-officer','d-badge','d-vin','d-vout','d-cctns','d-edar','d-missing'].forEach(id=>{const e=document.getElementById(id);if(e)e.value='';});
-  document.getElementById('d-dist').value='';
-  document.getElementById('d-rank').value='';
-  document.getElementById('d-date').value=new Date().toISOString().split('T')[0];
-  document.getElementById('d-decl').checked=false;
-  ['itms-tb','moto-tb','vol-tb','fatal-tb'].forEach(id=>{const e=document.getElementById(id);if(e)e.innerHTML='';});
-  document.getElementById('moto-info').style.display='block';
-  document.getElementById('moto-info').textContent='ℹ️ District select karo — motorcycles automatically load honge.';
-  rn={itms:0,vol:0,fatal:0};
-  document.getElementById('submit-msg').style.display='none';
+  ['f-off','f-badge','f-vin','f-vout','f-cctns','f-edar','f-miss'].forEach(id=>{const e=document.getElementById(id);if(e)e.value='';});
+  document.getElementById('f-dist').value=''; document.getElementById('f-rank').value='';
+  document.getElementById('f-date').value=new Date().toISOString().split('T')[0];
+  document.getElementById('f-decl').checked=false;
+  ['itms-tb','bike-tb','vol-tb','fat-tb'].forEach(id=>{const e=document.getElementById(id);if(e)e.innerHTML='';});
+  document.getElementById('bike-info').style.display='block';
+  document.getElementById('bike-info').textContent='ℹ️ Pehle district select karo.';
+  rn={itms:0,vol:0,fat:0};
+  document.getElementById('sub-msg').style.display='none';
 }
 
 function copyMsg(){
-  const txt=`🚦 HP Police DSI Portal\nWebsite: https://7-cyber.github.io\n\n📋 Yahan apna district select karke daily DSI report fill karein.\nData directly HQ ko jaata hai.\n\n⏰ Har roz report submit karni zaroori hai.\n\n_Traffic, Tourist & Railways Wing, HP Police_`;
-  navigator.clipboard.writeText(txt).then(()=>alert('Message copy ho gaya! WhatsApp pe paste karo.')).catch(()=>alert('Copy nahi hua, manually copy karo.'));
+  const t='🚦 HP Police DSI Portal\nWebsite: https://7-cyber.github.io\n\n📋 Apna district select karke daily DSI report fill karein.\nData directly HQ ko jaata hai.\n\n⏰ Har roz report submit karni zaroori hai.\n\n_Traffic, Tourist & Railways Wing, HP Police_';
+  navigator.clipboard.writeText(t).then(()=>alert('✅ Message copy ho gaya! WhatsApp pe paste karo.')).catch(()=>alert('Manual copy karo.'));
 }
 </script>
 </body>
