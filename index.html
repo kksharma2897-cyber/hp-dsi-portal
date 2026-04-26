@@ -98,22 +98,54 @@ tr:hover td{background:#f4f7fb;}
   <div class="ht">
     <h1>HP Police — DSI Portal</h1>
     <div class="dsi">Daily Situation Report &nbsp;|&nbsp; 15 Districts → HQ</div>
-    <div class="sub">District data fill karo → Google Sheet mein auto save</div>
+    <div class="sub">Fill district data → Auto saved to Google Sheet</div>
+  </div>
+  <div id="user-info" style="display:none;margin-left:auto;text-align:right;font-size:11px">
+    <strong id="user-name-disp" style="display:block;font-family:'Rajdhani',sans-serif;font-size:14px;color:var(--gold)"></strong>
+    <span id="user-role-disp" style="opacity:.7;font-size:10px"></span><br>
+    <button onclick="doLogout()" style="background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.3);border-radius:4px;padding:3px 10px;font-size:11px;cursor:pointer;margin-top:3px;font-family:'Rajdhani',sans-serif;font-weight:600">🚪 Logout</button>
   </div>
 </header>
 
-<nav>
-  <button class="on" onclick="go('form')">📋 DSI Form</button>
-  <button onclick="go('hq')">📊 HQ Dashboard</button>
-  <button onclick="go('pdf')">📄 PDF</button>
-  <button onclick="go('admin')">🛡️ Admin</button>
+<nav id="main-nav" style="display:none">
+  <button id="nav-form" class="on" onclick="go('form')" style="display:none">📋 DSI Form</button>
+  <button id="nav-hq" onclick="go('hq')" style="display:none">📊 HQ Dashboard</button>
+  <button id="nav-pdf" onclick="go('pdf')" style="display:none">📄 PDF</button>
+  <button id="nav-admin" onclick="go('admin')" style="display:none">🛡️ Admin</button>
 </nav>
 
+<!-- ══ LOGIN ══ -->
+<div id="pg-login" class="pg on">
+<div style="min-height:80vh;display:flex;align-items:center;justify-content:center;padding:24px 14px">
+  <div style="background:#fff;border-radius:10px;box-shadow:var(--sh);width:100%;max-width:360px;overflow:hidden">
+    <div style="background:linear-gradient(135deg,#0d1f3c,var(--blue));padding:24px;text-align:center;color:#fff">
+      <div style="font-size:40px;margin-bottom:8px">🚦</div>
+      <div style="font-family:'Rajdhani',sans-serif;font-size:18px;font-weight:700;letter-spacing:1px;text-transform:uppercase">HP Police — DSI Portal</div>
+      <div style="font-size:11px;opacity:.7;margin-top:3px">Traffic, Tourist & Railways Wing</div>
+    </div>
+    <div style="padding:22px">
+      <div class="ntc">🔒 Authorized Personnel Only</div>
+      <div class="fg" style="margin-bottom:12px">
+        <label>Username <span class="r">*</span></label>
+        <input type="text" id="l-user" placeholder="e.g. shimla / admin" autocapitalize="none" autocorrect="off">
+      </div>
+      <div class="fg" style="margin-bottom:16px">
+        <label>Password <span class="r">*</span></label>
+        <input type="password" id="l-pass" placeholder="Enter password" onkeydown="if(event.key==='Enter')doLogin()">
+      </div>
+      <button class="btn bgn" style="width:100%;justify-content:center" onclick="doLogin()" id="l-btn">Login</button>
+      <div id="l-err" style="display:none;margin-top:10px" class="ae"></div>
+      <div style="margin-top:14px;font-size:10.5px;color:var(--muted);text-align:center">For assistance contact PHQ IT Cell</div>
+    </div>
+  </div>
+</div>
+</div>
+
 <!-- ══ FORM ══ -->
-<div id="pg-form" class="pg on">
+<div id="pg-form" class="pg">
 <main>
   <div class="st2">DSI Report — Data Entry</div>
-  <div class="ss2">Apna district select karo, data bharo, submit karo.</div>
+  <div class="ss2">Select your district, fill the data and submit.</div>
 
   <div class="card">
     <div class="ct"><span>📌</span> Report Header</div>
@@ -121,7 +153,7 @@ tr:hover td{background:#f4f7fb;}
       <div class="fg"><label>Date <span class="r">*</span></label><input type="date" id="f-date"></div>
       <div class="fg"><label>District <span class="r">*</span></label>
         <select id="f-dist" onchange="loadBikes()">
-          <option value="">— District Select Karo —</option>
+          <option value="">— Select Your District —</option>
           <option>Baddi (BBN)</option><option>Bilaspur</option><option>Chamba</option>
           <option>Dehra</option><option>Hamirpur</option><option>Kangra</option>
           <option>Kinnaur</option><option>Kullu</option><option>Lahaul &amp; Spiti</option>
@@ -135,13 +167,6 @@ tr:hover td{background:#f4f7fb;}
           <option value="">— Select —</option>
           <option>Constable</option><option>Head Constable</option><option>ASI</option>
           <option>Sub-Inspector</option><option>Inspector</option><option>DSP</option><option>SP</option>
-        </select>
-      </div>
-      <div class="fg"><label>Badge No.</label><input type="text" id="f-badge" placeholder="HP-XXXX-XXXX"></div>
-      <div class="fg"><label>Shift</label>
-        <select id="f-shift">
-          <option>Full Day (24 Hrs)</option><option>Morning (06:00–14:00)</option>
-          <option>Afternoon (14:00–22:00)</option><option>Night (22:00–06:00)</option>
         </select>
       </div>
     </div>
@@ -159,8 +184,8 @@ tr:hover td{background:#f4f7fb;}
   </div>
 
   <div class="card">
-    <div class="ct"><span>🏍️</span> Section 2 — Motorcycle Status (World Bank)</div>
-    <div class="inf" id="bike-info">ℹ️ Pehle district select karo.</div>
+    <div class="ct"><span>🏍️</span> Section 2 — Motorcycle Status (World Bank Project)</div>
+    <div class="inf" id="bike-info">ℹ️ Please select your district — motorcycles will load automatically.</div>
     <div class="tw">
       <table><thead><tr>
         <th>#</th><th>Reg. No.</th><th>PS / Beat</th>
@@ -189,16 +214,16 @@ tr:hover td{background:#f4f7fb;}
   </div>
 
   <div class="card gn">
-    <div class="ct"><span>✅</span> Submit to HQ</div>
+    <div class="ct"><span>✅</span> Submit</div>
     <div style="font-size:11.5px;background:#f7f9fb;border:1px solid var(--border);border-radius:5px;padding:10px 13px;margin-bottom:10px">
-      Main declare karta/karti hoon ki upar di gayi jaankari bilkul sahi hai.
+      I hereby declare that the information provided above is true and correct to the best of my knowledge.
     </div>
     <label style="display:flex;align-items:center;gap:7px;font-size:12px;font-weight:400;text-transform:none;letter-spacing:0;cursor:pointer">
-      <input type="checkbox" id="f-decl"> Declaration accept karta/karti hoon
+      <input type="checkbox" id="f-decl"> I accept the above declaration
     </label>
     <div class="ba">
-      <button class="btn bgn" id="sub-btn" onclick="submitForm()">📤 Google Sheet mein Submit</button>
-      <button class="btn bo" onclick="resetForm()">🔄 Reset</button>
+      <button class="btn bgn" id="sub-btn" onclick="submitForm()">Submit</button>
+      <button class="btn bo" onclick="resetForm()">Reset</button>
     </div>
     <div id="sub-msg" style="display:none"></div>
   </div>
@@ -209,14 +234,14 @@ tr:hover td{background:#f4f7fb;}
 <div id="pg-hq" class="pg">
 <main>
   <div class="st2">HQ Consolidated Dashboard</div>
-  <div class="ss2">Google Sheet se live data. Date select karo aur load karo.</div>
+  <div class="ss2">Google Sheet se live data. Select date and load consolidated data.</div>
   <div style="display:flex;gap:9px;margin-bottom:12px;align-items:flex-end;flex-wrap:wrap">
     <div class="fg" style="flex:1;min-width:140px"><label>Report Date</label><input type="date" id="hq-dt"></div>
     <button class="btn bp" onclick="loadHQ()">🔄 Load Data</button>
     <button class="btn bg2" onclick="goAndPDF()">📄 PDF Banao</button>
   </div>
   <div id="hq-load" style="text-align:center;padding:28px;color:var(--muted);background:#fff;border-radius:8px;box-shadow:var(--sh)">
-    Date select karo aur Load Data dabao
+    Select date and click Load Data
   </div>
   <div id="hq-con" style="display:none">
     <div class="sts">
@@ -263,12 +288,14 @@ tr:hover td{background:#f4f7fb;}
 <div id="pg-pdf" class="pg">
 <main>
   <div class="st2">📄 Consolidated DSI Report</div>
-  <div class="ss2">Print → Save as PDF karo.</div>
-  <div class="ba" style="margin-bottom:13px">
-    <button class="btn bp" onclick="window.print()">🖨️ Print / Save as PDF</button>
-    <button class="btn bg2" onclick="makePDF()">🔄 PDF Reload Karo</button>
+  <div class="ss2">Select date → Load &amp; Build PDF → Print.</div>
+  <div style="display:flex;gap:9px;margin-bottom:13px;align-items:flex-end;flex-wrap:wrap">
+    <div class="fg" style="flex:1;min-width:140px"><label>Report Date</label><input type="date" id="pdf-dt"></div>
+    <button class="btn bgn" onclick="loadAndBuildPDF()">📥 Load &amp; Build PDF</button>
+    <button class="btn bp" id="pdf-print-btn" onclick="window.print()" style="display:none">🖨️ Print / Save as PDF</button>
     <button class="btn bo" onclick="go('hq')">← Back</button>
   </div>
+  <div id="pdf-msg" style="display:none;padding:14px;background:#fff;border-radius:8px;box-shadow:var(--sh);text-align:center;margin-bottom:13px"></div>
   <div class="pw">
     <div class="ph">
       <div class="pl">🚦</div>
@@ -328,10 +355,10 @@ tr:hover td{background:#f4f7fb;}
 <div id="pg-admin" class="pg">
 <main>
   <div class="st2">Admin Panel</div>
-  <div class="ss2">Google Sheet aur WhatsApp message.</div>
+  <div class="ss2">Google Sheet access and WhatsApp message template.</div>
   <div class="card">
     <div class="ct"><span>📊</span> Google Sheet — Direct Access</div>
-    <div class="ntc">⚠️ Yeh link sirf aapke paas (HQ) hona chahiye. Isme sabka data directly dikhta hai.</div>
+    <div class="ntc">⚠️ This link is for HQ only. All district data is directly visible here.</div>
     <a href="https://docs.google.com/spreadsheets/d/1CiQcFdxVIM9h_nSqf2GbZ9JXXItVd7m7JsOinrx2aZc" target="_blank" class="btn bg2" style="text-decoration:none;display:inline-flex">📊 Google Sheet Kholo</a>
   </div>
   <div class="card">
@@ -358,6 +385,30 @@ tr:hover td{background:#f4f7fb;}
 // ── CONFIG — Apps Script URL ──
 const API = 'https://script.google.com/macros/s/AKfycbzfNIq8vl3w0mliy8Ssmaz0JkIKvuz51_zbaiAw5Q8QAYbR7AT4qDcxZqefD1cI0f9LvQ/exec';
 
+// ── LOGIN CREDENTIALS ──
+const USERS = {
+  'admin':    { pass:'hppolice@admin', role:'admin',    district:null },
+  'baddi':    { pass:'baddi@123',      role:'district', district:'Baddi (BBN)' },
+  'bilaspur': { pass:'bilaspur@123',   role:'district', district:'Bilaspur' },
+  'chamba':   { pass:'chamba@123',     role:'district', district:'Chamba' },
+  'dehra':    { pass:'dehra@123',      role:'district', district:'Dehra' },
+  'hamirpur': { pass:'hamirpur@123',   role:'district', district:'Hamirpur' },
+  'kangra':   { pass:'kangra@123',     role:'district', district:'Kangra' },
+  'kinnaur':  { pass:'kinnaur@123',    role:'district', district:'Kinnaur' },
+  'kullu':    { pass:'kullu@123',      role:'district', district:'Kullu' },
+  'lahaul':   { pass:'lahaul@123',     role:'district', district:'Lahaul & Spiti' },
+  'mandi':    { pass:'mandi@123',      role:'district', district:'Mandi' },
+  'nurpur':   { pass:'nurpur@123',     role:'district', district:'Nurpur' },
+  'shimla':   { pass:'shimla@123',     role:'district', district:'Shimla' },
+  'sirmour':  { pass:'sirmour@123',    role:'district', district:'Sirmour' },
+  'solan':    { pass:'solan@123',      role:'district', district:'Solan' },
+  'una':      { pass:'una@123',        role:'district', district:'Una' }
+};
+
+let currentUser = null;
+// Check existing session
+try { const s=sessionStorage.getItem('dsi_user'); if(s) currentUser=JSON.parse(s); } catch(e){}
+
 // ── MOTORCYCLE DATA ──
 const BIKES = {
   'Baddi (BBN)':[{r:'HP63C-7692',p:'Traffic Wing Baddi'},{r:'HP63C-7723',p:'Traffic Wing Nalagarh'}],
@@ -383,17 +434,71 @@ let HD={summary:[],moto:[],vol:[],itms:[],fatal:[]};
 setInterval(()=>{ document.getElementById('clk').textContent=new Date().toLocaleString('en-IN',{weekday:'short',day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit',second:'2-digit'}); },1000);
 
 // Init dates
-document.getElementById('f-date').value=new Date().toISOString().split('T')[0];
-document.getElementById('hq-dt').value=new Date().toISOString().split('T')[0];
+const TODAY = new Date().toISOString().split('T')[0];
+document.getElementById('f-date').value=TODAY;
+document.getElementById('hq-dt').value=TODAY;
+document.getElementById('pdf-dt').value=TODAY;
+
+// Auto login if session exists
+if(currentUser){ setupAfterLogin(); } else { go('login'); }
 
 // Nav
 function go(p){
   document.querySelectorAll('.pg').forEach(x=>x.classList.remove('on'));
   document.getElementById('pg-'+p).classList.add('on');
   document.querySelectorAll('nav button').forEach(b=>b.classList.remove('on'));
-  const i={form:0,hq:1,pdf:2,admin:3}[p];
-  if(i!==undefined) document.querySelectorAll('nav button')[i].classList.add('on');
+  const navMap={form:'nav-form',hq:'nav-hq',pdf:'nav-pdf',admin:'nav-admin'};
+  if(navMap[p]) { const nb=document.getElementById(navMap[p]); if(nb) nb.classList.add('on'); }
   window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function doLogin(){
+  const uname=document.getElementById('l-user').value.trim().toLowerCase();
+  const pass=document.getElementById('l-pass').value;
+  const btn=document.getElementById('l-btn');
+  const err=document.getElementById('l-err');
+  if(!uname||!pass){err.textContent='Username and password are required.';err.style.display='block';return;}
+  const user=USERS[uname];
+  if(!user||user.pass!==pass){err.textContent='Invalid username or password.';err.style.display='block';return;}
+  // Login success
+  currentUser=user;
+  currentUser.username=uname;
+  try{sessionStorage.setItem('dsi_user',JSON.stringify(currentUser));}catch(e){}
+  setupAfterLogin();
+}
+
+function setupAfterLogin(){
+  // Show user info in header
+  document.getElementById('user-info').style.display='block';
+  document.getElementById('user-name-disp').textContent=currentUser.role==='admin'?'🛡️ ADMIN':'👮 '+currentUser.district;
+  document.getElementById('user-role-disp').textContent=currentUser.role==='admin'?'HQ — Full Access':'District Officer';
+  // Show nav
+  document.getElementById('main-nav').style.display='flex';
+  if(currentUser.role==='admin'){
+    document.getElementById('nav-hq').style.display='block';
+    document.getElementById('nav-pdf').style.display='block';
+    document.getElementById('nav-admin').style.display='block';
+    go('hq');
+  } else {
+    document.getElementById('nav-form').style.display='block';
+    // Pre-fill district and lock it
+    document.getElementById('f-dist').value=currentUser.district;
+    document.getElementById('f-dist').disabled=true;
+    loadBikes();
+    go('form');
+  }
+}
+
+function doLogout(){
+  currentUser=null;
+  try{sessionStorage.removeItem('dsi_user');}catch(e){}
+  document.getElementById('user-info').style.display='none';
+  document.getElementById('main-nav').style.display='none';
+  document.getElementById('l-user').value='';
+  document.getElementById('l-pass').value='';
+  document.getElementById('l-err').style.display='none';
+  document.getElementById('f-dist').disabled=false;
+  go('login');
 }
 
 // Load bikes when district selected
@@ -402,9 +507,9 @@ function loadBikes(){
   const tb=document.getElementById('bike-tb');
   const info=document.getElementById('bike-info');
   tb.innerHTML='';
-  if(!dist){info.style.display='block';info.textContent='ℹ️ Pehle district select karo.';return;}
+  if(!dist){info.style.display='block';info.textContent='ℹ️ Please select your district first.';return;}
   const list=BIKES[dist]||[];
-  if(!list.length){info.style.display='block';info.textContent=dist+' ke liye koi motorcycle record nahi hai.';return;}
+  if(!list.length){info.style.display='block';info.textContent=dist+' has no motorcycle records assigned.';return;}
   info.style.display='none';
   list.forEach((b,i)=>{
     const tr=document.createElement('tr');
@@ -453,33 +558,33 @@ async function submitForm(){
   const off=document.getElementById('f-off').value.trim();
   const rank=document.getElementById('f-rank').value;
   const decl=document.getElementById('f-decl').checked;
-  if(!date||!dist||!off||!rank){alert('Date, District, Officer Name aur Rank zaruri hai.');return;}
-  if(!decl){alert('Pehle declaration accept karo.');return;}
+  if(!date||!dist||!off||!rank){alert('Date, District, Officer Name and Rank are required.');return;}
+  if(!decl){alert('Please accept the declaration first.');return;}
   const btn=document.getElementById('sub-btn');
   const msg=document.getElementById('sub-msg');
-  btn.innerHTML='<span class="ld"></span>Submit ho raha hai...'; btn.disabled=true; msg.style.display='none';
+  btn.innerHTML='<span class="ld"></span>Submitting...'; btn.disabled=true; msg.style.display='none';
   try{
     const payload={action:'submit',date,district:dist,officer:off,rank,badge:document.getElementById('f-badge').value||'',shift:document.getElementById('f-shift').value,vin:+document.getElementById('f-vin').value||0,vout:+document.getElementById('f-vout').value||0,cctns:+document.getElementById('f-cctns').value||0,edar:+document.getElementById('f-edar').value||0,missing:document.getElementById('f-miss').value||'',moto:getBikes(),itms:getRows('itms'),vol:getRows('vol'),fatal:getRows('fat')};
     const res=await fetch(API,{method:'POST',mode:'cors',body:JSON.stringify(payload)});
     const d=await res.json();
     msg.style.display='block';
-    if(d.ok){msg.className='as';msg.innerHTML='✅ <strong>'+dist+'</strong> ka data Google Sheet mein save ho gaya!';}
+    if(d.ok){msg.className='as';msg.innerHTML='✅ <strong>'+dist+'</strong> data saved to HQ Google Sheet successfully!';}
     else{msg.className='ae';msg.textContent='❌ Error: '+(d.msg||'Unknown');}
-  }catch(e){msg.style.display='block';msg.className='ae';msg.textContent='❌ Submit nahi hua. Internet check karo aur dobara try karo.';}
-  btn.innerHTML='📤 Google Sheet mein Submit'; btn.disabled=false;
+  }catch(e){msg.style.display='block';msg.className='ae';msg.textContent='❌ Submission failed. Please check your internet and try again.';}
+  btn.innerHTML='Submit'; btn.disabled=false;
 }
 
 // Load HQ
 async function loadHQ(){
   const date=document.getElementById('hq-dt').value;
   const ld=document.getElementById('hq-load'); const con=document.getElementById('hq-con');
-  ld.style.display='block'; ld.innerHTML='<span class="ld" style="border-top-color:var(--blue);border-color:rgba(26,58,107,.2)"></span> Google Sheet se data load ho raha hai...'; con.style.display='none';
+  ld.style.display='block'; ld.innerHTML='<span class="ld" style="border-top-color:var(--blue);border-color:rgba(26,58,107,.2)"></span> Loading data from Google Sheet...'; con.style.display='none';
   try{
     const res=await fetch(API,{method:'POST',mode:'cors',body:JSON.stringify({action:'fetch',date})});
     const d=await res.json();
     if(d.ok){HD=d;renderHQ(d);ld.style.display='none';con.style.display='block';}
     else{ld.innerHTML='❌ '+d.msg;}
-  }catch(e){ld.innerHTML='❌ Load nahi hua. Internet check karo aur dobara try karo.';}
+  }catch(e){ld.innerHTML='❌ Failed to load. Please check your internet and try again.';}
 }
 
 function renderHQ(d){
@@ -523,14 +628,29 @@ function renderHQ(d){
   document.getElementById('hq-itms').innerHTML=il.length?il.map((it,i)=>`<tr><td>${i+1}</td><td><strong>${it.District}</strong></td><td>${it.Location}</td><td>${it.Reason}</td></tr>`).join(''):`<tr><td colspan="4" style="text-align:center;color:var(--muted);padding:11px">No ITMS issues.</td></tr>`;
 }
 
-// Build PDF
-function goAndPDF(){
-  if(!HD.summary || HD.summary.length===0){
-    alert('Pehle HQ Dashboard mein "Load Data" dabao, phir PDF banao!');
-    return;
+// Build PDF — directly fetches from sheet
+async function loadAndBuildPDF(){
+  const date = document.getElementById('pdf-dt').value;
+  if(!date){alert('Please select a date first!');return;}
+  const msg = document.getElementById('pdf-msg');
+  const printBtn = document.getElementById('pdf-print-btn');
+  msg.style.display='block';
+  msg.innerHTML='<span class="ld" style="border-top-color:var(--blue);border-color:rgba(26,58,107,.2)"></span> Loading data from Google Sheet...';
+  printBtn.style.display='none';
+  try{
+    const res = await fetch(API,{method:'POST',mode:'cors',body:JSON.stringify({action:'fetch',date})});
+    const d = await res.json();
+    if(d.ok){
+      HD=d;
+      makePDF();
+      msg.innerHTML='✅ Data loaded successfully! Click Print to save as PDF.';
+      printBtn.style.display='inline-flex';
+    } else {
+      msg.innerHTML='❌ Error: '+(d.msg||'No data found');
+    }
+  }catch(e){
+    msg.innerHTML='❌ Failed to load data. Please check your internet.';
   }
-  go('pdf');
-  setTimeout(makePDF, 300);
 }
 
 function makePDF(){
@@ -564,14 +684,14 @@ function resetForm(){
   document.getElementById('f-decl').checked=false;
   ['itms-tb','bike-tb','vol-tb','fat-tb'].forEach(id=>{const e=document.getElementById(id);if(e)e.innerHTML='';});
   document.getElementById('bike-info').style.display='block';
-  document.getElementById('bike-info').textContent='ℹ️ Pehle district select karo.';
+  document.getElementById('bike-info').textContent='ℹ️ Select your district — motorcycles will load automatically.';
   rn={itms:0,vol:0,fat:0};
   document.getElementById('sub-msg').style.display='none';
 }
 
 function copyMsg(){
   const t='🚦 HP Police DSI Portal\nWebsite: https://7-cyber.github.io\n\n📋 Apna district select karke daily DSI report fill karein.\nData directly HQ ko jaata hai.\n\n⏰ Har roz report submit karni zaroori hai.\n\n_Traffic, Tourist & Railways Wing, HP Police_';
-  navigator.clipboard.writeText(t).then(()=>alert('✅ Message copy ho gaya! WhatsApp pe paste karo.')).catch(()=>alert('Manual copy karo.'));
+  navigator.clipboard.writeText(t).then(()=>alert('✅ Message copied! Paste it on WhatsApp.')).catch(()=>alert('Please copy manually.'));
 }
 </script>
 </body>
