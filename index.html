@@ -213,7 +213,7 @@ tr:hover td{background:#f4f7fb;}
   <div style="display:flex;gap:9px;margin-bottom:12px;align-items:flex-end;flex-wrap:wrap">
     <div class="fg" style="flex:1;min-width:140px"><label>Report Date</label><input type="date" id="hq-dt"></div>
     <button class="btn bp" onclick="loadHQ()">🔄 Load Data</button>
-    <button class="btn bg2" onclick="go('pdf');makePDF()">📄 PDF Banao</button>
+    <button class="btn bg2" onclick="goAndPDF()">📄 PDF Banao</button>
   </div>
   <div id="hq-load" style="text-align:center;padding:28px;color:var(--muted);background:#fff;border-radius:8px;box-shadow:var(--sh)">
     Date select karo aur Load Data dabao
@@ -266,6 +266,7 @@ tr:hover td{background:#f4f7fb;}
   <div class="ss2">Print → Save as PDF karo.</div>
   <div class="ba" style="margin-bottom:13px">
     <button class="btn bp" onclick="window.print()">🖨️ Print / Save as PDF</button>
+    <button class="btn bg2" onclick="makePDF()">🔄 PDF Reload Karo</button>
     <button class="btn bo" onclick="go('hq')">← Back</button>
   </div>
   <div class="pw">
@@ -523,6 +524,15 @@ function renderHQ(d){
 }
 
 // Build PDF
+function goAndPDF(){
+  if(!HD.summary || HD.summary.length===0){
+    alert('Pehle HQ Dashboard mein "Load Data" dabao, phir PDF banao!');
+    return;
+  }
+  go('pdf');
+  setTimeout(makePDF, 300);
+}
+
 function makePDF(){
   const rows=HD.summary||[];
   const date=document.getElementById('hq-dt').value||new Date().toISOString().split('T')[0];
