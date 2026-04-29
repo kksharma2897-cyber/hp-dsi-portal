@@ -383,7 +383,7 @@ tr:hover td{background:#f4f7fb;}
 
 <script>
 // ── CONFIG — Apps Script URL ──
-const API = 'https://script.google.com/macros/s/AKfycbzfNIq8vl3w0mliy8Ssmaz0JkIKvuz51_zbaiAw5Q8QAYbR7AT4qDcxZqefD1cI0f9LvQ/exec';
+const API = 'https://script.google.com/macros/s/AKfycbzEDBWQ6dMhUfazy__QcLlY112nC9IM6aXg9Qi0eIJHZCW6IsP7Cvn15XgXtv7KSkDWrA/exec';
 
 // ── LOGIN CREDENTIALS ──
 const USERS = {
@@ -565,7 +565,7 @@ async function submitForm(){
   btn.innerHTML='<span class="ld"></span>Submitting...'; btn.disabled=true; msg.style.display='none';
   try{
     const payload={action:'submit',date,district:dist,officer:off,rank,badge:document.getElementById('f-badge').value||'',shift:document.getElementById('f-shift').value,vin:+document.getElementById('f-vin').value||0,vout:+document.getElementById('f-vout').value||0,cctns:+document.getElementById('f-cctns').value||0,edar:+document.getElementById('f-edar').value||0,missing:document.getElementById('f-miss').value||'',moto:getBikes(),itms:getRows('itms'),vol:getRows('vol'),fatal:getRows('fat')};
-    const res=await fetch(API,{method:'POST',mode:'cors',body:JSON.stringify(payload)});
+    const res=await fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
     const d=await res.json();
     msg.style.display='block';
     if(d.ok){msg.className='as';msg.innerHTML='✅ <strong>'+dist+'</strong> data saved to HQ Google Sheet successfully!';}
@@ -580,7 +580,7 @@ async function loadHQ(){
   const ld=document.getElementById('hq-load'); const con=document.getElementById('hq-con');
   ld.style.display='block'; ld.innerHTML='<span class="ld" style="border-top-color:var(--blue);border-color:rgba(26,58,107,.2)"></span> Loading data from Google Sheet...'; con.style.display='none';
   try{
-    const res=await fetch(API,{method:'POST',mode:'cors',body:JSON.stringify({action:'fetch',date})});
+    const res=await fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:'fetch',date})});
     const d=await res.json();
     if(d.ok){HD=d;renderHQ(d);ld.style.display='none';con.style.display='block';}
     else{ld.innerHTML='❌ '+d.msg;}
@@ -638,7 +638,7 @@ async function loadAndBuildPDF(){
   msg.innerHTML='<span class="ld" style="border-top-color:var(--blue);border-color:rgba(26,58,107,.2)"></span> Loading data from Google Sheet...';
   printBtn.style.display='none';
   try{
-    const res = await fetch(API,{method:'POST',mode:'cors',body:JSON.stringify({action:'fetch',date})});
+    const res = await fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:'fetch',date})});
     const d = await res.json();
     if(d.ok){
       HD=d;
